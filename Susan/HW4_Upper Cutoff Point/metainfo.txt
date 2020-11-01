@@ -1,6 +1,6 @@
 Name of Quantlet: 'SDA_2020_NCTU\Susan\'
 
-Description: 'Calculate probability of the data that will lie outside of the upper cut point'
+Description: 'Calculate probability of the data that will lie outside of the upper cutoff point'
 
 Submitted:  '1 Nov 2020'
 
@@ -8,6 +8,6 @@ Datafiles: 'N/A'
 
 Input: 'N/A'
 
-Output:  'upper cut point, boxplot, and proability of the data that lies outside upper cut point'
+Output:  'upper cutoff point, boxplot, and proability of the data that lies outside upper cutoff point'
 
 Author: Susan
