@@ -1,14 +1,13 @@
 Name of Quantlet: 'SDA_2020_NCTU\Susan\'
 
-Description: 'Upper Cuttint Point for Nomal Distribution'
+Description: 'Calculate probability of the data that will lie outside of the upper cut point'
 
 Submitted:  '1 Nov 2020'
 
-Datafiles: 
-'random generated'
+Datafiles: 'N/A'
 
 Input: 'N/A'
 
-Output:  'Quantitle of Upper cut point, boxplot, and proability of data outside upper cut point'
+Output:  'upper cut point, boxplot, and proability of the data that lies outside upper cut point'
 
 Author: Susan
