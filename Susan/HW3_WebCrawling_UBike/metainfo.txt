@@ -1,6 +1,6 @@
 Name of Quantlet: 'SDA_2020_NCTU\Susan\'
 
-Description: 'A Web Crawler for UBike website, and visulizes data with scatter plots'
+Description: 'A Web Crawler for UBike website, and visualizes data with scatter plot'
 
 Submitted:  '1 Nov 2020'
 
