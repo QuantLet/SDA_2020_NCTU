@@ -1,6 +1,6 @@
 Name of Quantlet: SDA_class2020_NCTU_Abstract_LDA_LDAAnalysis
 
-See also DEDA_class2019_SYSU_Abstract_LDA_LDAAnaysis
+See also DEDA_class2019_SYSU_Abstract_LDA_LDAAnalysis
 
 Published in:  LN_SDA_2019
 
