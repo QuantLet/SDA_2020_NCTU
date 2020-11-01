@@ -1,6 +1,6 @@
 Name of Quantlet: 'SDA_2020_NCTU\Susan\'
 
-Description: 'Word cloud on Japnese News'
+Description: 'Word cloud on Japanese News'
 
 Submitted:  '1 Nov 2020'
 
