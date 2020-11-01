@@ -1,0 +1,15 @@
+Name of Quantlet: 'SDA_2020_NCTU\Susan\'
+
+Description: 'Web Crawling for UBike open data and shows GEO map information'
+
+Submitted:  '1 Nov 2020'
+
+Datafiles: 
+'https://data.ntpc.gov.tw/api/datasets/71CD1490-A2DF-4198-BEF1-318479775E8A/json'
+'https://tcgbusfs.blob.core.windows.net/blobyoubike/YouBikeTP.json'
+
+Input: json format (crawling from URL directly)
+
+Output:  Geo map with Lantitude and Logititude
+
+Author: Susan Ku
