@@ -1,0 +1,14 @@
+Name of Quantlet: 'SDA_2020_NCTU\Susan\'
+
+Description: 'Upper Cuttint Point for Nomal Distribution'
+
+Submitted:  '1 Nov 2020'
+
+Datafiles: 
+'random generated'
+
+Input: 'N/A'
+
+Output:  'Quantitle of Upper cut point, boxplot, and proability of data outside upper cut point'
+
+Author: Susan
