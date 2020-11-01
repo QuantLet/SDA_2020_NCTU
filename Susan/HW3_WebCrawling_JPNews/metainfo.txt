@@ -1,0 +1,17 @@
+Name of Quantlet: 'SDA_2020_NCTU\Susan\'
+
+Description: 'World cloud analysis for Japnese News'
+The original code from Quantlet does not work in my environemt, provide step-by-step fixed codes for this part
+
+Submitted:  '1 Nov 2020'
+
+Datafiles: 
+- yahoo_jp.csv
+- stopwords-ja.txt
+- NotoSansCJKjp.otf
+
+Input: none
+
+Output:  wordcloud_jp.png
+
+Author : Junjie Hu, Susan Ku
