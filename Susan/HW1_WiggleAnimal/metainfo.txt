@@ -1,12 +1,12 @@
 Name of Quantlet: 'SDA_2020_NCTU\Susan\'
 
-Description: 'Wiggle Animal'
+Description: 'A swimming fish'
 
 Submitted:  '1 Nov 2020'
 
 Datafiles: 'N/A'
 
-Input: 'Modify parameters in original source'
+Input: 'N/A'
 
 Output:  Fish_MoorishIdol.png, fish_wiggle.mp4
 
