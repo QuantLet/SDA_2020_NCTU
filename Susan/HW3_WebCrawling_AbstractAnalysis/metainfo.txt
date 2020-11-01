@@ -1,6 +1,6 @@
 Name of Quantlet: 'SDA_2020_NCTU\Susan\'
 
-Description: 'Abstract Analysis for k-topics'
+Description: 'A web crawler for Abstract Analysis'
 
 Submitted:  '1 Nov 2020'
 
@@ -8,8 +8,8 @@ Datafiles:
 'http://www.wiwi.hu-berlin.de/de/forschung/irtg/results/discussion-papers'
 'https://www.wiwi.hu-berlin.de/de/forschung/irtg/results/'
 
-Input: modify parameter k
+Input: N/A
 
-Output:  words analysis with grouping
+Output:  'heatmap_abstract.png'
 
 Author: FB, FS, JH, WKH
