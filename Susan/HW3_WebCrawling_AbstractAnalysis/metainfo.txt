@@ -1,0 +1,15 @@
+Name of Quantlet: 'SDA_2020_NCTU\Susan\'
+
+Description: 'Abstract Analysis for k-topics'
+
+Submitted:  '1 Nov 2020'
+
+Datafiles: 
+'http://www.wiwi.hu-berlin.de/de/forschung/irtg/results/discussion-papers'
+'https://www.wiwi.hu-berlin.de/de/forschung/irtg/results/'
+
+Input: modify parameter k
+
+Output:  words analysis with grouping
+
+Author: FB, FS, JH, WKH
