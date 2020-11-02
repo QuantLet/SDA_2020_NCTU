@@ -1,6 +1,6 @@
 Name of Quantlet: 'SDA_2020_NCTU\Susan\'
 
-Description: 'Word cloud on Japanese News'
+Description: 'Word cloud on Japanese news'
 
 Submitted:  '1 Nov 2020'
 
@@ -9,7 +9,7 @@ Datafiles:
 - stopwords-ja.txt
 - NotoSansCJKjp.otf
 
-Input: none
+Input: 'N/A'
 
 Output:  wordcloud_jp.png
 
