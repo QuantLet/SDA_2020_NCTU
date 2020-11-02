@@ -1,13 +1,11 @@
-Name of Quantlet: SDA_class2020_NCTU_Abstract_LDA_LDAAnalysis
+Name of Quantlet: abstract_LDA_K_topics
 
-See also DEDA_class2019_SYSU_Abstract_LDA_LDAAnalysis
-
-Published in:  LN_SDA_2019
+Published in:  LN_SDA_2020
 
 Description: Summarize K topics from 130 collected abstracts with LDA method
 
 Keywords: LDA, topic modelling, abstract analysis
 
-See also: LDA-DTM_Christmas Songs
+See also: LDA-DTM_Christmas Songs, DEDA_class2019_SYSU_Abstract_LDA_LDAAnalysis
 
 Author: FB, FS, WKH, Muhaimin 20201101
