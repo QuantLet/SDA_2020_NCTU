@@ -8,6 +8,6 @@ Datafiles: 'N/A'
 
 Input: 'N/A'
 
-Output:  'upper cutoff point, boxplot, and proability of the data that lies outside upper cutoff point'
+Output:  'upper cutoff point, boxplot, and probability of the data that lies outside upper cutoff point'
 
 Author: Susan
