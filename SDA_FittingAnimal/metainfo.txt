@@ -1,0 +1,13 @@
+Name of Quantlet: 'SDA_FittingAnimal'
+
+Description: 'Use parameters to fit a swimming fish'
+
+Submitted:  '3 Nov 2020'
+
+Datafiles: 
+
+Input:
+
+Output:  Fish_MoorishIdol.png, fish_wiggle.mp4
+
+Author: Piotr A. Zolnierczuk, Junjie Hu, Susan
