@@ -1,4 +1,4 @@
-Name of Quantlet: 'SDA_2020_NCTU\Susan\'
+Name of Quantlet: 'Webscripting-plot-basemap'
 
 Description: 'A Web Crawler for UBike website, and visualizes data with scatter plot'
 
