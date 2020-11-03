@@ -1,0 +1,13 @@
+Name of Quantlet: 'Probability_Upper_Cutoff_Point'
+
+Description: 'Calculate probability of the data that will lie outside of the upper cutoff point'
+
+Submitted:  '3 Nov 2020'
+
+Datafiles: 
+
+Input:
+
+Output:  'upper cutoff point, boxplot, and probability of the data that lies outside upper cutoff point'
+
+Author: Susan
