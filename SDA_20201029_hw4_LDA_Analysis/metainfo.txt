@@ -1,0 +1,19 @@
+Name of Quantlet: SDA_20201029_hw4_LDA_Analysis
+
+Description: "LDA analysis of the abstracts of a set of scientifique papers to understand main topics that are handled in those papers."
+
+Created : 29 October 2020
+
+input:-
+
+output: heat-map
+
+Keywords: 
+-LDA
+-heat-map
+-topic-modelling
+
+Author: Bousbiat Hafsa
+
+Modified to six topics of abstract: 29 October 2020 by Andreas Rony Wijaya
+
