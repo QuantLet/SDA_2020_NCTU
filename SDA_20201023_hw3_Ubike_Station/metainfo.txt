@@ -1,0 +1,16 @@
+Name of Quantlet : SDA_20201023_hw3_Ubike_Station
+
+Description : Mapping the u-bike station in Taipei with the number of u-bike left at that station.
+
+Created : 23 October 2020
+
+Input: json format (crawling from URL directly)
+
+Output:  Scatter plot and the map of ubike station with Longitude and Latitude
+
+Keywords : 
+- Ubike Station
+- Taipei Map
+
+
+Author : Andreas Rony Wijaya, NCTU
