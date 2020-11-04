@@ -1,0 +1,12 @@
+Name of Quantlet: 'SDA_20201016_hw2_Proposal Final Project'
+
+Description: 'Proposal for Final Project of SDA I Class'
+
+Created:  '16 Oct 2020'
+
+Keywords:
+-LSTM
+-VAR
+-CNN
+
+Author: Samingun Handoyo, Andreas Rony Wijaya
