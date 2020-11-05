@@ -1,0 +1,10 @@
+Name of Quantlet: 'Crypto Currency Index (CRIX)'
+
+Description: 'Calculating index for Crypto Currency'
+
+Output:  'Time series plot from yahoo finance dataset'
+
+Keywords:
+- Crypto Currency
+
+Author: Dwilaksana
