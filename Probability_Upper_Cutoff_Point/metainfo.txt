@@ -10,4 +10,4 @@ Input:
 
 Output:  'upper cutoff point, boxplot, and probability of the data that lies outside upper cutoff point'
 
-Author: Susan
+Author: 'Susan'
