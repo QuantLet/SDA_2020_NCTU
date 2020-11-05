@@ -4,7 +4,7 @@
 
 ```yaml
 
-Name of Quantlet : SDA_2020_NCTU_LDA Analysis
+Name of Quantlet : lda_analysis
 Published in :  SDA_2020_NCTU
 
 Description :  perform LDA Analysis on given dataset

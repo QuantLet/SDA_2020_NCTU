@@ -4,7 +4,7 @@
 
 ```yaml
 
-Name of Quantlet : SDA_2020_NCTU_drawing_animal
+Name of Quantlet : drawing_animal
 
 Published in :  SDA_2020_NCTU
 

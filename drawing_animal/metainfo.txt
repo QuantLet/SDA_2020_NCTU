@@ -1,0 +1,15 @@
+Name of Quantlet : drawing_animal
+
+Published in :  SDA_2020_NCTU
+
+Description :  
+- Use complex numbers as parameters to fit animal that can move 
+- I choose to draw a Happy Hippo that can move his nose and output the results as .mp4 file.
+
+Keywords : 
+- Complex analysis
+- Fourier Transform
+- Moving animal
+- Happy Hippo
+
+Author : Huong Vu 0856156
