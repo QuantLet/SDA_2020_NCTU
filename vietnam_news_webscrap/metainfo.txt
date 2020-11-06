@@ -1,4 +1,4 @@
-Name of Quantlet : vietnam_news_webscap
+Name of Quantlet : vietnam_news_webscrap
 
 Published in :  SDA_2020_NCTU
 
