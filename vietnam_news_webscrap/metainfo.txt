@@ -7,7 +7,7 @@ Description :
 - Provide the wordcloud of the headlines
 
 Keywords : 
-- Web-scaping
+- Web-scraping
 - Vietnam News
 - Wordcloud
 
