@@ -1,0 +1,804 @@
+[<img src="https://github.com/QuantLet/Styleguide-and-FAQ/blob/master/pictures/banner.png" width="888" alt="Visit QuantNet">](http://quantlet.de/)
+
+## [<img src="https://github.com/QuantLet/Styleguide-and-FAQ/blob/master/pictures/qloqo.png" alt="Visit QuantNet">](http://quantlet.de/) **Abstract_LDA_K_topics** [<img src="https://github.com/QuantLet/Styleguide-and-FAQ/blob/master/pictures/QN2.png" width="60" alt="Visit QuantNet 2.0">](http://quantlet.de/)
+
+```yaml
+
+Name of Quantlet: Abstract_LDA_K_topics
+
+Published in:  LN_SDA_2020
+
+Description: Summarize K topics from 130 collected abstracts with LDA method
+
+Keywords: LDA, topic modelling, abstract analysis
+
+See also: LDA-DTM_Christmas Songs, DEDA_class2019_SYSU_Abstract_LDA_LDAAnalysis
+
+Author: FB, FS, WKH, Muhaimin 20201101
+
+```
+
+![Picture1](heatmap_abstract.png)
+
+### IPYNB Code
+```ipynb
+
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Task 2.ipynb",
+      "provenance": [],
+      "collapsed_sections": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "RdV9fHngVdci"
+      },
+      "source": [
+        "#load library for crawling\n",
+        "import requests  # take the website source code back to you\n",
+        "import urllib  # some useful functions to deal with website URLs\n",
+        "from bs4 import BeautifulSoup as soup  # a package to parse website source code\n",
+        "import numpy as np  # all the numerical calculation related methods\n",
+        "import re  # regular expression package\n",
+        "import itertools  # a package to do iteration works\n",
+        "import pickle  # a package to save your file temporarily\n",
+        "import pandas as pd  # process structured data\n",
+        "import os"
+      ],
+      "execution_count": 1,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Bd9HyFFQa-6Q",
+        "outputId": "d4d7f3e4-023b-472e-85cf-c76fc8d00fa3",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "#define the link for crawling\n",
+        "sub_dir = os.getcwd() + \"SDA_Task_2\"\n",
+        "cwd_dir = sub_dir if os.path.exists(sub_dir) else os.getcwd()\n",
+        "base_link = 'http://www.wiwi.hu-berlin.de/de/forschung/irtg/results/discussion-papers'  # This link can represent the domain of a series of websites\n",
+        "abs_link = 'https://www.wiwi.hu-berlin.de/de/forschung/irtg/results/'\n",
+        "\n",
+        "#crawling the abstract by link above.\n",
+        "request_result = requests.get(base_link, headers={'Connection': 'close'})  # get source code\n",
+        "parsed = soup(request_result.content)  # parse source code\n",
+        "tr_items = parsed.find_all('tr')\n",
+        "info_list = []\n",
+        "for item in tr_items:\n",
+        "    link_list = item.find_all('td')\n",
+        "    try:\n",
+        "        paper_title = re.sub(pattern=r'\\s+', repl=' ', string=link_list[1].text.strip())\n",
+        "        author = link_list[2].text\n",
+        "        date_of_issue = link_list[3].text\n",
+        "        abstract_link = link_list[5].find('a')['href']\n",
+        "        info_list.append([paper_title, author, date_of_issue, abstract_link])\n",
+        "    except Exception as e:\n",
+        "        print(e)\n",
+        "        print(link_list[5])\n",
+        "        continue\n",
+        "\n",
+        "abstract_all = list()\n",
+        "\n",
+        "for paper in info_list:\n",
+        "    print(paper[0])\n",
+        "    try:\n",
+        "        paper_abstract_page = requests.get(abs_link + paper[3], headers={'Connection': 'close'})\n",
+        "\n",
+        "        if paper_abstract_page.status_code == 200:\n",
+        "            # if paper[3][-3:] == 'txt':\n",
+        "            abstract_parsed = soup(paper_abstract_page.content)\n",
+        "            main_part = abstract_parsed.find_all('div', attrs={'id': r'content-core'})[0].text.strip()\n",
+        "            # if paper[3][-3:] == 'pdf':\n",
+        "            #     abstract_parsed = soup(paper_abstract_page.content)\n",
+        "            #     main_part = abstract_parsed.find_all('body')[0].text.strip()\n",
+        "\n",
+        "            main_part = re.sub(r'.+?[Aa]bstract', 'Abstract', main_part)\n",
+        "            main_part = re.sub(r'JEL [Cc]lassification:.*', '', main_part)\n",
+        "            main_part = re.sub(r'[A-Za-z][0-9][0-9]?', '', main_part)\n",
+        "            main_part = re.sub('[\\r\\n]+', ' ', main_part)\n",
+        "\n",
+        "            abstract_all.append(main_part + \"\\nSEP\\n\")\n",
+        "\n",
+        "        else:\n",
+        "            raise ConnectionError(f\"Can not access the website. Error Code: {paper_abstract_page.status_code}\")\n",
+        "        # with open(abs_folder + f\"{re.sub('[^a-zA-Z0-9 ]', '', paper[0])}.txt\", 'w', encoding='utf-8') as abs_f:\n",
+        "        #     abs_f.write(main_part)\n",
+        "\n",
+        "    except Exception as e:\n",
+        "        print(e)\n",
+        "        print(paper[3])\n",
+        "        continue\n",
+        "with open('Abstract_all.txt', 'w') as abs_all_f:\n",
+        "  abs_all_f.writelines(abstract_all)"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "'NoneType' object is not subscriptable\n",
+            "<td bgcolor=\"#BBBBBB\" bordercolordark=\"#FFFFFF\" bordercolorlight=\"#FFFFFF\" data-darkreader-inline-bgcolor=\"\" style=\"width:40px; height:18px\"><span style=\"--darkreader-inline-bgcolor:#262b35\"><b><font face=\"sans-serif, Arial, Helvetica, Geneva\"><font size=\"-1\">Abstract</font></font></b></span></td>\n",
+            "'NoneType' object is not subscriptable\n",
+            "<td bgcolor=\"#BBBBBB\" bordercolordark=\"#FFFFFF\" bordercolorlight=\"#FFFFFF\" data-darkreader-inline-bgcolor=\"\" height=\"18\" style=\"--darkreader-inline-bgcolor:#262b35;\" width=\"40\"><b><font face=\"sans-serif, Arial, Helvetica, Geneva\"><font size=\"-1\">Abstract</font></font></b></td>\n",
+            "'NoneType' object is not subscriptable\n",
+            "<td bgcolor=\"#BBBBBB\" bordercolordark=\"#FFFFFF\" bordercolorlight=\"#FFFFFF\" data-darkreader-inline-bgcolor=\"\" height=\"18\" style=\"--darkreader-inline-bgcolor:#262b35;\" width=\"40\"><b><font face=\"sans-serif, Arial, Helvetica, Geneva\"><font size=\"-1\">Abstract</font></font></b></td>\n",
+            "'NoneType' object is not subscriptable\n",
+            "<td bgcolor=\"#BBBBBB\" bordercolordark=\"#FFFFFF\" bordercolorlight=\"#FFFFFF\" data-darkreader-inline-bgcolor=\"\" height=\"18\" style=\"--darkreader-inline-bgcolor:#262b35;\" width=\"40\"><b><font face=\"sans-serif, Arial, Helvetica, Geneva\"><font size=\"-1\">Abstract</font></font></b></td>\n",
+            "'NoneType' object is not subscriptable\n",
+            "<td bgcolor=\"#BBBBBB\" bordercolordark=\"#FFFFFF\" bordercolorlight=\"#FFFFFF\" data-darkreader-inline-bgcolor=\"\" height=\"18\" style=\"--darkreader-inline-bgcolor:#262b35;\" width=\"40\"><b><font face=\"sans-serif, Arial, Helvetica, Geneva\"><font size=\"-1\">Abstract</font></font></b></td>\n",
+            "'NoneType' object is not subscriptable\n",
+            "<td bgcolor=\"#BBBBBB\" bordercolordark=\"#FFFFFF\" bordercolorlight=\"#FFFFFF\" data-darkreader-inline-bgcolor=\"\" height=\"18\" style=\"--darkreader-inline-bgcolor:#262b35;\" width=\"40\"><b><font face=\"sans-serif, Arial, Helvetica, Geneva\"><font size=\"-1\">Abstract</font></font></b></td>\n",
+            "'NoneType' object is not subscriptable\n",
+            "<td bgcolor=\"#BBBBBB\" bordercolordark=\"#FFFFFF\" bordercolorlight=\"#FFFFFF\" data-darkreader-inline-bgcolor=\"\" height=\"18\" style=\"--darkreader-inline-bgcolor:#262b35;\" width=\"40\"><b><font face=\"sans-serif, Arial, Helvetica, Geneva\"><font size=\"-1\">Abstract</font></font></b></td>\n",
+            "Non-Parametric Estimation of Spot Covariance Matrix with High-Frequency Data\n",
+            "Dynamic Spatial Network Quantile Autoregression\n",
+            "The common and specific components of ination expectation across European countries\n",
+            "Tail Event Driven Factor Augmented Dynamic Model\n",
+            "Improved Estimation of Dynamic Models of Conditional Means and Variances\n",
+            "Long- and Short-Run Components of Factor Betas: Implications for Stock Pricing\n",
+            "Inference of breakpoints in high-dimensional time series\n",
+            "A supreme test for periodic explosive GARCH\n",
+            "Using generalized estimating equations to estimate nonlinear models with spatial data\n",
+            "A data-driven P-spline smoother and the P-Spline-GARCH models\n",
+            "Tail-risk protection: Machine Learning meets modern Econometrics\n",
+            "Cross-Fitting and Averaging for Machine Learning Estimation of Heterogeneous Treatment Effects\n",
+            "A Machine Learning Based Regulatory Risk Index for Cryptocurrencies\n",
+            "On Cointegration and Cryptocurrency Dynamics\n",
+            "The Effect of Control Measures on COVID-19 Transmission and Work Resumption: International Evidence\n",
+            "Kernel Estimation: the Equivalent Spline Smoothing Method\n",
+            "CRIX an Index for cryptocurrencies\n",
+            "Simultaneous Inference of the Partially Linear Model with a Multivariate Unknown Function\n",
+            "Deep Learning application for fraud detection in financial statements\n",
+            "Forex exchange rate forecasting using deep recurrent neural networks\n",
+            "Targeting Cutsomers Under Response-Dependent Costs\n",
+            "Factorisable Multitask Quantile Regression\n",
+            "Structured climate financing: valuation of CDOs on inhomogeneous asset pools\n",
+            "Service Data Analytics and Business Intelligence\n",
+            "Estimation and Determinants of Chinese Banks’ Total Factor Efficiency: A New Vision Based on Unbalanced Development of Chinese Banks and Their Overall Risk\n",
+            "Combining Penalization & Adaption in High Dimension with Application in Bond Risk Premia Forecasting\n",
+            "Antisocial Online Behavior Detection Using Deep Learning\n",
+            "Group Average Treatment Effects for Observational Studies\n",
+            "VCRIX - a volatility index for crypto-currencies\n",
+            "Affordable Uplift: Supervised Randomization in Controlled Experiments\n",
+            "SONIC: SOcial Network with Influencers and Communities\n",
+            "Risk of Bitcoin Market: Volatility, Jumps, and Forecasts\n",
+            "Can Deep Learning Predict Risky Retail Investors? A Case Study in Financial Risk Behavior Forecasting\n",
+            "A Machine Learning Approach Towards Startup Success Prediction\n",
+            "FRM Financial Risk Meter\n",
+            "Rise of the Machines? Intraday High-Frequency Trading Patterns of Cryptocurrencies\n",
+            "Modelling Systemic Risk Using Neural Network Quantile Regression\n",
+            "Phenotypic convergence of cryptocurrencies\n",
+            "Portmanteau Test and Simultaneous Inference for Serial Covariances\n",
+            "What makes cryptocurrencies special? Investor sentiment and return predictability during the bubble\n",
+            "Media-expressed tone, Option Characteristics, and Stock Return Predictability\n",
+            "Forecasting in Blockchain-based Local Energy Markets\n",
+            "Inference of Break-Points in High-Dimensional Time Series\n",
+            "Voting for Health Insurance Policy: the U.S. versus Europe\n",
+            "The role of medical expenses in the saving decision of elderly: a life cycle model\n",
+            "Understanding the Role of Housing in Inequality and Social Mobility\n",
+            "Dynamic Network Perspective of Cryptocurrencies\n",
+            "Forex Exchange Rate Forecasting Using Deep Recurrent Neural Networks\n",
+            "Localizing Multivariate CAViaR\n",
+            "Adaptive Nonparametric Community Detection\n",
+            "Usage Continuance in Software-as-a-Service\n",
+            "Constrained Kelly portfolios under alpha-stable laws\n",
+            "Estimating low sampling frequency risk measure by high-frequency data\n",
+            "Information Arrival, News Sentiment, Volatilities and Jumps of Intraday Returns\n",
+            "Cooling Measures and housing wealth: evidence from Singapore\n",
+            "Deep learning-based cryptocurrency sentiment construction\n",
+            "Price Management in the Used-Car Market: An Evaluation of Survival Analysis\n",
+            "Semiparametric Estimation and Variable Selection for Single-index Copula Models\n",
+            "Conversion uplift in e-commerce: A systematic benchmark of modeling strategies\n",
+            "Plug-In L2-Upper Error Bounds In Deconvolution, For A Mixing Density Estimate In Rd And For Its Derivatives\n",
+            "Residual's Influence Index (Rinfin), Bad Leverage And Unmasking In High Dimensional L2-Regression\n",
+            "Towards the interpretation of time-varying regularization parameters in streaming penalized regression models\n",
+            "Investing with cryptocurrencies - evaluating the potential of portfolio allocation strategies\n",
+            "Trending Mixture Copula Models with Copula Selection\n",
+            "Cryptocurrencies, Metcalfe's law and LPPL models\n",
+            "Estimation of the discontinuous leverage effect: Evidence from the NASDAQ order book\n",
+            "Topic Modeling for Analyzing Open-Ended Survey Responses\n",
+            "The impact of temperature on gaming productivity: evidence from online games\n",
+            "Nonparametric Additive Instrumental Variable Estimator: A Group Shrinkage Estimation Perspective\n",
+            "Variable selection and direction estimation for single-index models via DC-TGDR method\n",
+            "Variable selection and direction estimation for single-index models via DC-TGDR method\n",
+            "Strict Stationarity Testing and GLAD Estimation of Double Autoregressive Models\n",
+            "A Regime Shift Model with Nonparametric Switching Mechanism\n",
+            "Inferences for a Partially Varying Coefficient Model With Endogenous Regressors\n",
+            "Forecasting the Term Structure of Option Implied Volatility: The Power of an Adaptive Method\n",
+            "Predicative Ability of Similarity-based Futures Trading Strategies\n",
+            "Understanding Cryptocurrencies\n",
+            "Textual Sentiment and Sector specific reaction\n",
+            "On Complete Convergence in Marcinkiewicz-Zygmund Type SLLN for END Random Variables and its Applications\n",
+            "On complete convergence in Marcinkiewicz-Zygmund type SLLN for random variables\n",
+            "Complete Convergence and Complete Moment Convergence for Maximal Weighted Sums of Extended Negatively Dependent Random Variables\n",
+            "Penalized Adaptive Forecasting with Large Information Sets and Structural Changes\n",
+            "Tail-Risk Protection Trading Strategies\n",
+            "Default probabilities and default correlations under stress\n",
+            "Model risk of contingent claims\n",
+            "Correlation Under Stress In Normal Variance Mixture Models\n",
+            "A factor-model approach for correlation scenarios and correlation stress-testing\n",
+            "Optimal contracts under competition when uncertainty from adverse selection and moral hazard are present\n",
+            "Understanding Latent Group Structure of Cryptocurrencies Market: A Dynamic Network Perspective\n",
+            "Instrumental variables regression\n",
+            "Gaussian Process Forecast with multidimensional distributional entries\n",
+            "Pointwise adaptation via stagewise aggregation of local estimates for multiclass classification\n",
+            "Toolbox: Gaussian comparison on Eucledian balls\n",
+            "Bayesian inference for spectral projectors of covariance matrix\n",
+            "Large ball probabilities, Gaussian comparison and anti-concentration\n",
+            "Construction of Non-asymptotic Confidence Sets in 2 -Wasserstein Space\n",
+            "Bootstrap Confidence Sets for Spectral Projectors of Sample Covariance\n",
+            "Textual Sentiment, Option Characteristics, and Stock Return Predictability\n",
+            "Learning from Errors: The case of monetary and fiscal policy regimes\n",
+            "LASSO-Driven Inference in Time and Space\n",
+            "A Regime Shift Model with Nonparametric Switching Mechanism\n",
+            "Lasso, knockoff and Gaussian covariates: a comparison\n",
+            "Adaptive Nonparametric Clustering\n",
+            "Regularization Approach for Network Modeling of German Energy Market\n",
+            "Time-varying Limit Order Book Networks\n",
+            "Bitcoin is not the New Gold - A Comparison of Volatility, Correlation, and Portfolio Performance\n",
+            "Price Discovery on Bitcoin Markets\n",
+            "Improving Crime Count Forecasts Using Twitter and Taxi Data\n",
+            "Targeting customers for profit: An ensemble learning framework to support marketing decision making\n",
+            "How to Measure a Performance of a Collaborative Research Centre\n",
+            "How Sensitive are Tail-related Risk Measures in a Contamination Neighbourhood?\n",
+            "Deregulated day-ahead electricity markets in Southeast Europe: Price forecasting and comparative structural analysis\n",
+            "A Monetary Model of Blockchain\n",
+            "Knowing me, knowing you: inventor mobility and the formation of technology-oriented alliances\n",
+            "A Note on Cryptocurrencies and Currency Competition\n",
+            "Testing for bubbles in cryptocurrencies with time-varying volatility\n",
+            "Pricing Cryptocurrency Options: The Case of Bitcoin and CRIX\n",
+            "Systemic Risk in Global Volatility Spillover Networks: Evidence from Option-implied Volatility Indices\n",
+            "Nonparametric Variable Selection and Its Application to Additive Models\n",
+            "Data Driven Value-at-Risk Forecasting using a SVR-GARCH-KDE Hybrid\n",
+            "Is Scientific Performance a Function of Funds?\n",
+            "Dynamic semi-parametric factor model for functional expectiles\n",
+            "Dynamic Semiparametric Factor Model with a Common Break\n",
+            "Realized volatility of CO2 futures\n",
+            "Spatial Functional Principal Component Analysis with Applications to Brain Image Data\n",
+            "Penalized Adaptive Method in Forecasting with Large Information Set and Structure Change\n",
+            "Das deutsche Arbeitsmarktwunder: Eine Bilanz\n",
+            "The systemic risk of central SIFIs\n",
+            "Pricing Green Financial Products\n",
+            "Racial/Ethnic Differences In Non-Work At Work\n",
+            "Investing with cryptocurrencies - A liquidity constrained investment approach\n",
+            "Adaptive weights clustering of research papers\n",
+            "Industry Interdependency Dynamics in a Network Context\n",
+            "Data Science & Digital Society\n",
+            "The Economics of German Unification after Twenty-five Years: Lessons for Korea\n",
+            "Testing Missing at Random using Instrumental Variables\n",
+            "Tail event driven networks of SIFIs\n",
+            "An AI approach to measuring financial risk\n",
+            "Dynamic credit default swaps curves in a network topology\n",
+            "Multivariate Factorisable Sparse Asymmetric Least Squares Regression\n",
+            "Dynamic Topic Modelling for Cryptocurrency Community Forums\n",
+            "Network Quantile Autoregression\n",
+            "Time Varying Quantile Lasso\n",
+            "The Cross-Section of Crypto-Currencies as Financial Assets: An Overview\n",
+            "Time-Adaptive Probabilistic Forecasts of Electricity Spot Prices with Application to Risk Management\n",
+            "Specification Testing in Nonparametric Instrumental Quantile Regression\n",
+            "A first econometric analysis of the CRIX family\n",
+            "Forecasting Limit Order Book Liquidity Supply-Demand Curves with Functional AutoRegressive Dynamics\n",
+            "A Mortality Model for Multi-populations: A Semi-Parametric Approach\n",
+            "CRIX an Index for blockchain based Currencies\n",
+            "Academic Ranking Scales in Economics: Prediction and Imputation\n",
+            "Factorisable Sparse Tail Event Curves with Expectiles\n",
+            "The German Labor Market Miracle, 2003 -2015: An Assessment\n",
+            "Leveraged ETF options implied volatility paradox: a statistical study\n",
+            "Specification Testing in Random Coefficient Models\n",
+            "lCARE - localizing Conditional AutoRegressive Expectiles\n",
+            "Nonparametric Estimation in case of Endogenous Selection\n",
+            "Inflation Co-movement across Countries in Multi-maturity Term Structure: An Arbitrage-Free Approach\n",
+            "CRIX or evaluating Blockchain based currencies\n",
+            "TERES - Tail Event Risk Expectile based Shortfall\n",
+            "Tail Event Driven ASset allocation: evidence from equity and mutual funds’ markets\n",
+            "Copula-Based Factor Model for Credit Risk Analysis\n",
+            "An Adaptive Approach to Forecasting Three Key Macroeconomic Variables for Transitional China\n",
+            "Estimation of NAIRU with Inflation Expectation Data\n",
+            "Stochastic Population Analysis: A Functional Data Approach\n",
+            "TENET: Tail-Event driven NETwork risk\n",
+            "Volatility Modelling of CO2 Emission Allowance Spot Prices with Regime-Switching GARCH Models\n",
+            "Adaptive Order Flow Forecasting with Multiplicative Error Models\n",
+            "TEDAS - Tail Event Driven ASset Allocation\n",
+            "Forecasting Generalized Quantiles of Electricity Demand: A Functional Data Approach\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "MdHJJUWgd6fe",
+        "outputId": "6901640b-abff-49db-a837-99fe12269caa",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "#load library for LDA\n",
+        "import random\n",
+        "import os\n",
+        "import re\n",
+        "import nltk\n",
+        "nltk.download('punkt')\n",
+        "nltk.download('stopwords')\n",
+        "from os import path\n",
+        "from nltk.stem import WordNetLemmatizer \n",
+        "from nltk.stem.porter import PorterStemmer\n",
+        "from nltk.corpus import stopwords\n",
+        "from nltk.corpus import stopwords \n",
+        "from nltk.stem.wordnet import WordNetLemmatizer\n",
+        "import string\n",
+        "import gensim\n",
+        "from gensim import corpora\n",
+        "import matplotlib.pyplot as plt\n",
+        "import pandas as pd\n",
+        "import numpy as np"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[nltk_data] Downloading package punkt to /root/nltk_data...\n",
+            "[nltk_data]   Unzipping tokenizers/punkt.zip.\n",
+            "[nltk_data] Downloading package stopwords to /root/nltk_data...\n",
+            "[nltk_data]   Unzipping corpora/stopwords.zip.\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "E1jiZuHygYpG",
+        "outputId": "b26f5f23-8965-41cd-ce0e-da6294d84597",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 1000
+        }
+      },
+      "source": [
+        "#declare the number of topics want to be generate and notated by K\n",
+        "K = 10 #number of topics\n",
+        "text_pre = open('Abstract_all.txt', encoding = \"utf8\").read()\n",
+        "doc_l = str.split(text_pre, sep = 'SEP')\n",
+        "doc_complete = doc_l\n",
+        "doc_out = []\n",
+        "for l in doc_l:\n",
+        "    cleantextprep = str(l)\n",
+        "    # Regex cleaning\n",
+        "    expression = \"[^a-zA-Z ]\" # keep only letters, numbers and whitespace\n",
+        "    cleantextCAP = re.sub(expression, ' ', cleantextprep) # apply regex\n",
+        "    cleantextCAP = re.sub('\\s+', ' ', cleantextCAP) # apply regex\n",
+        "    cleantext = cleantextCAP.lower() # lower case \n",
+        "    bound = ''.join(cleantext)\n",
+        "    doc_out.append(bound)\n",
+        "doc_complete = doc_out\n",
+        "stop = set(stopwords.words('english'))\n",
+        "stop = stop.union({'result','keywords','study','using','paper','abstract','f','x','e','result','topic','proposed','one'})\n",
+        "exclude = set(string.punctuation) \n",
+        "lemma = WordNetLemmatizer()\n",
+        "import nltk\n",
+        "nltk.download('wordnet')\n",
+        "def clean(doc):\n",
+        "    stop_free = \" \".join([i for i in doc.lower().split() if i not in stop])\n",
+        "    punc_free = ''.join(ch for ch in stop_free if ch not in exclude)\n",
+        "    normalized = \" \".join(lemma.lemmatize(word) for word in punc_free.split())\n",
+        "    return normalized\n",
+        "doc_clean = [clean(doc).split() for doc in doc_complete]    \n",
+        "# Importing Gensim\n",
+        "# Creating the term dictionary of our courpus, where every unique term is assigned an index.\n",
+        "dictionary = corpora.Dictionary(doc_clean)\n",
+        "# Converting list of documents (corpus) into Document Term Matrix using dictionary prepared above.\n",
+        "doc_term_matrix = [dictionary.doc2bow(doc) for doc in doc_clean]\n",
+        "# Creating the object for LDA model using gensim library\n",
+        "Lda = gensim.models.ldamodel.LdaModel\n",
+        "# Running and Trainign LDA model on the document term matrix.\n",
+        "ldamodel = Lda(doc_term_matrix, num_topics=7, id2word = dictionary, passes=50, random_state = 3154)\n",
+        "#print(ldamodel.print_topics(num_topics=3, num_words=5))\n",
+        "topicWordProbMat=ldamodel.print_topics(K)\n",
+        "columns = (['Topics '+str(x) for x in range(1,K+1)])\n",
+        "df = pd.DataFrame(columns=columns)\n",
+        "df = pd.DataFrame(columns = columns)\n",
+        "pd.set_option('display.width', 1000)\n",
+        "# 20 need to modify to match the length of vocabulary \n",
+        "zz = np.zeros(shape=(100,K))\n",
+        "last_number=0\n",
+        "DC={}\n",
+        "data = pd.DataFrame({columns[0]:\"\"}, index=[0])\n",
+        "for x in range(100):\n",
+        "  for i in range(1,len(columns)):\n",
+        "    data[columns[i]] = \"\"\n",
+        "  df = df.append(data, ignore_index=True)\n",
+        "for line in topicWordProbMat: \n",
+        "    tp, w = line\n",
+        "    probs=w.split(\"+\")\n",
+        "    y=0\n",
+        "    for pr in probs:  \n",
+        "        a=pr.split(\"*\")\n",
+        "        df.iloc[y,tp] = a[1]\n",
+        "        a[1] = a[1].strip()\n",
+        "        if a[1] in DC:\n",
+        "           zz[DC[a[1]]][tp]=a[0]\n",
+        "        else:\n",
+        "           zz[last_number][tp]=a[0]\n",
+        "           DC[a[1]]=last_number\n",
+        "           last_number=last_number+1\n",
+        "        y=y+1\n",
+        "print (df)\n",
+        "print (zz)\n",
+        "zz=np.resize(zz,(len(DC.keys()),zz.shape[1]))\n",
+        "plt.figure(figsize=(80,25))\n",
+        "for val, key in enumerate(DC.keys()):\n",
+        "        plt.text(-2.5, val + 0.5, key,\n",
+        "                 horizontalalignment='center',\n",
+        "                 verticalalignment='center'\n",
+        "                 )\n",
+        "#plt.imshow(zz, cmap='hot', interpolation='nearest')\n",
+        "plt.imshow(zz, cmap='rainbow', interpolation='nearest')\n",
+        "#plt.show()\n",
+        "plt.yticks([])\n",
+        "# plt.title(\"heatmap xmas song\")\n",
+        "plt.savefig(\"heatmap_abstract.png\", transparent = True, dpi=400)"
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[nltk_data] Downloading package wordnet to /root/nltk_data...\n",
+            "[nltk_data]   Package wordnet is already up-to-date!\n",
+            "       Topics 1       Topics 2     Topics 3  ... Topics 8 Topics 9 Topics 10\n",
+            "0      \"model\"        \"model\"      \"model\"   ...                            \n",
+            "1    \"network\"         \"risk\"     \"method\"   ...                            \n",
+            "2       \"data\"       \"market\"       \"data\"   ...                            \n",
+            "3   \"research\"   \"volatility\"   \"variable\"   ...                            \n",
+            "4     \"sample\"         \"time\"     \"random\"   ...                            \n",
+            "..          ...            ...          ...  ...      ...      ...       ...\n",
+            "95                                           ...                            \n",
+            "96                                           ...                            \n",
+            "97                                           ...                            \n",
+            "98                                           ...                            \n",
+            "99                                           ...                            \n",
+            "\n",
+            "[100 rows x 10 columns]\n",
+            "[[0.012 0.019 0.013 0.016 0.    0.    0.025 0.    0.    0.   ]\n",
+            " [0.008 0.    0.    0.    0.    0.    0.01  0.    0.    0.   ]\n",
+            " [0.008 0.005 0.011 0.01  0.    0.    0.006 0.    0.    0.   ]\n",
+            " [0.007 0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.005 0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.005 0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.005 0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.005 0.009 0.    0.009 0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.005 0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.005 0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.017 0.    0.013 0.011 0.    0.014 0.    0.    0.   ]\n",
+            " [0.    0.013 0.    0.    0.02  0.007 0.    0.    0.    0.   ]\n",
+            " [0.    0.011 0.    0.    0.007 0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.008 0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.006 0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.006 0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.006 0.006 0.    0.    0.    0.006 0.    0.    0.   ]\n",
+            " [0.    0.    0.012 0.006 0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.009 0.    0.    0.    0.008 0.    0.    0.   ]\n",
+            " [0.    0.    0.007 0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.005 0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.005 0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.005 0.007 0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.005 0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.008 0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.007 0.    0.    0.006 0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.007 0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.006 0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.012 0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.008 0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.008 0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.007 0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.007 0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.006 0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.006 0.    0.007 0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.01  0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.007 0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.006 0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.006 0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.006 0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.005 0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.005 0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.005 0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.005 0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.007 0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.006 0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]\n",
+            " [0.    0.    0.    0.    0.    0.    0.    0.    0.    0.   ]]\n"
+          ],
+          "name": "stdout"
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "image/png": "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\n",
+            "text/plain": [
+              "<Figure size 5760x1800 with 1 Axes>"
+            ]
+          },
+          "metadata": {
+            "tags": [],
+            "needs_background": "light"
+          }
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "iL93nJHmhiHv"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
+```
+
+automatically created on 2020-11-06
+
+### PYTHON Code
+```python
+
+# -*- coding: utf-8 -*-
+"""Task 2.ipynb
+
+Automatically generated by Colaboratory.
+
+Original file is located at
+    https://colab.research.google.com/drive/1m4SfQ-na0h9GQnnA-2jhYVUqa8A4J2Ud
+"""
+
+#load library for crawling
+import requests  # take the website source code back to you
+import urllib  # some useful functions to deal with website URLs
+from bs4 import BeautifulSoup as soup  # a package to parse website source code
+import numpy as np  # all the numerical calculation related methods
+import re  # regular expression package
+import itertools  # a package to do iteration works
+import pickle  # a package to save your file temporarily
+import pandas as pd  # process structured data
+import os
+
+#define the link for crawling
+sub_dir = os.getcwd() + "SDA_Task_2"
+cwd_dir = sub_dir if os.path.exists(sub_dir) else os.getcwd()
+base_link = 'http://www.wiwi.hu-berlin.de/de/forschung/irtg/results/discussion-papers'  # This link can represent the domain of a series of websites
+abs_link = 'https://www.wiwi.hu-berlin.de/de/forschung/irtg/results/'
+
+#crawling the abstract by link above.
+request_result = requests.get(base_link, headers={'Connection': 'close'})  # get source code
+parsed = soup(request_result.content)  # parse source code
+tr_items = parsed.find_all('tr')
+info_list = []
+for item in tr_items:
+    link_list = item.find_all('td')
+    try:
+        paper_title = re.sub(pattern=r'\s+', repl=' ', string=link_list[1].text.strip())
+        author = link_list[2].text
+        date_of_issue = link_list[3].text
+        abstract_link = link_list[5].find('a')['href']
+        info_list.append([paper_title, author, date_of_issue, abstract_link])
+    except Exception as e:
+        print(e)
+        print(link_list[5])
+        continue
+
+abstract_all = list()
+
+for paper in info_list:
+    print(paper[0])
+    try:
+        paper_abstract_page = requests.get(abs_link + paper[3], headers={'Connection': 'close'})
+
+        if paper_abstract_page.status_code == 200:
+            # if paper[3][-3:] == 'txt':
+            abstract_parsed = soup(paper_abstract_page.content)
+            main_part = abstract_parsed.find_all('div', attrs={'id': r'content-core'})[0].text.strip()
+            # if paper[3][-3:] == 'pdf':
+            #     abstract_parsed = soup(paper_abstract_page.content)
+            #     main_part = abstract_parsed.find_all('body')[0].text.strip()
+
+            main_part = re.sub(r'.+?[Aa]bstract', 'Abstract', main_part)
+            main_part = re.sub(r'JEL [Cc]lassification:.*', '', main_part)
+            main_part = re.sub(r'[A-Za-z][0-9][0-9]?', '', main_part)
+            main_part = re.sub('[\r\n]+', ' ', main_part)
+
+            abstract_all.append(main_part + "\nSEP\n")
+
+        else:
+            raise ConnectionError(f"Can not access the website. Error Code: {paper_abstract_page.status_code}")
+        # with open(abs_folder + f"{re.sub('[^a-zA-Z0-9 ]', '', paper[0])}.txt", 'w', encoding='utf-8') as abs_f:
+        #     abs_f.write(main_part)
+
+    except Exception as e:
+        print(e)
+        print(paper[3])
+        continue
+with open('Abstract_all.txt', 'w') as abs_all_f:
+  abs_all_f.writelines(abstract_all)
+
+#load library for LDA
+import random
+import os
+import re
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+from os import path
+from nltk.stem import WordNetLemmatizer 
+from nltk.stem.porter import PorterStemmer
+from nltk.corpus import stopwords
+from nltk.corpus import stopwords 
+from nltk.stem.wordnet import WordNetLemmatizer
+import string
+import gensim
+from gensim import corpora
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+
+#declare the number of topics want to be generate and notated by K
+K = 10 #number of topics
+text_pre = open('Abstract_all.txt', encoding = "utf8").read()
+doc_l = str.split(text_pre, sep = 'SEP')
+doc_complete = doc_l
+doc_out = []
+for l in doc_l:
+    cleantextprep = str(l)
+    # Regex cleaning
+    expression = "[^a-zA-Z ]" # keep only letters, numbers and whitespace
+    cleantextCAP = re.sub(expression, ' ', cleantextprep) # apply regex
+    cleantextCAP = re.sub('\s+', ' ', cleantextCAP) # apply regex
+    cleantext = cleantextCAP.lower() # lower case 
+    bound = ''.join(cleantext)
+    doc_out.append(bound)
+doc_complete = doc_out
+stop = set(stopwords.words('english'))
+stop = stop.union({'result','keywords','study','using','paper','abstract','f','x','e','result','topic','proposed','one'})
+exclude = set(string.punctuation) 
+lemma = WordNetLemmatizer()
+import nltk
+nltk.download('wordnet')
+def clean(doc):
+    stop_free = " ".join([i for i in doc.lower().split() if i not in stop])
+    punc_free = ''.join(ch for ch in stop_free if ch not in exclude)
+    normalized = " ".join(lemma.lemmatize(word) for word in punc_free.split())
+    return normalized
+doc_clean = [clean(doc).split() for doc in doc_complete]    
+# Importing Gensim
+# Creating the term dictionary of our courpus, where every unique term is assigned an index.
+dictionary = corpora.Dictionary(doc_clean)
+# Converting list of documents (corpus) into Document Term Matrix using dictionary prepared above.
+doc_term_matrix = [dictionary.doc2bow(doc) for doc in doc_clean]
+# Creating the object for LDA model using gensim library
+Lda = gensim.models.ldamodel.LdaModel
+# Running and Trainign LDA model on the document term matrix.
+ldamodel = Lda(doc_term_matrix, num_topics=7, id2word = dictionary, passes=50, random_state = 3154)
+#print(ldamodel.print_topics(num_topics=3, num_words=5))
+topicWordProbMat=ldamodel.print_topics(K)
+columns = (['Topics '+str(x) for x in range(1,K+1)])
+df = pd.DataFrame(columns=columns)
+df = pd.DataFrame(columns = columns)
+pd.set_option('display.width', 1000)
+# 20 need to modify to match the length of vocabulary 
+zz = np.zeros(shape=(100,K))
+last_number=0
+DC={}
+data = pd.DataFrame({columns[0]:""}, index=[0])
+for x in range(100):
+  for i in range(1,len(columns)):
+    data[columns[i]] = ""
+  df = df.append(data, ignore_index=True)
+for line in topicWordProbMat: 
+    tp, w = line
+    probs=w.split("+")
+    y=0
+    for pr in probs:  
+        a=pr.split("*")
+        df.iloc[y,tp] = a[1]
+        a[1] = a[1].strip()
+        if a[1] in DC:
+           zz[DC[a[1]]][tp]=a[0]
+        else:
+           zz[last_number][tp]=a[0]
+           DC[a[1]]=last_number
+           last_number=last_number+1
+        y=y+1
+print (df)
+print (zz)
+zz=np.resize(zz,(len(DC.keys()),zz.shape[1]))
+plt.figure(figsize=(80,25))
+for val, key in enumerate(DC.keys()):
+        plt.text(-2.5, val + 0.5, key,
+                 horizontalalignment='center',
+                 verticalalignment='center'
+                 )
+#plt.imshow(zz, cmap='hot', interpolation='nearest')
+plt.imshow(zz, cmap='rainbow', interpolation='nearest')
+#plt.show()
+plt.yticks([])
+# plt.title("heatmap xmas song")
+plt.savefig("heatmap_abstract.png", transparent = True, dpi=400)
+
+
+```
+
+automatically created on 2020-11-06
