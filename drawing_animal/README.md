@@ -1,6 +1,6 @@
 [<img src="https://github.com/QuantLet/Styleguide-and-FAQ/blob/master/pictures/banner.png" width="888" alt="Visit QuantNet">](http://quantlet.de/)
 
-## [<img src="https://github.com/QuantLet/Styleguide-and-FAQ/blob/master/pictures/qloqo.png" alt="Visit QuantNet">](http://quantlet.de/) **Drawing Animal** [<img src="https://github.com/QuantLet/Styleguide-and-FAQ/blob/master/pictures/QN2.png" width="60" alt="Visit QuantNet 2.0">](http://quantlet.de/)
+## [<img src="https://github.com/QuantLet/Styleguide-and-FAQ/blob/master/pictures/qloqo.png" alt="Visit QuantNet">](http://quantlet.de/) **drawing_animal** [<img src="https://github.com/QuantLet/Styleguide-and-FAQ/blob/master/pictures/QN2.png" width="60" alt="Visit QuantNet 2.0">](http://quantlet.de/)
 
 ```yaml
 
@@ -22,4 +22,9 @@ Author : Huong Vu 0856156
 
 ```
 
-![happyhippo](https://user-images.githubusercontent.com/67493611/97881203-0fd95f00-1d5d-11eb-8b59-341089c063d0.png)
+![Picture1](happyhippo.png)
+
+### [IPYNB Code: drawing_animal.ipynb](drawing_animal.ipynb)
+
+
+automatically created on 2020-11-09
