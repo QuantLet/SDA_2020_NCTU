@@ -1,0 +1,11 @@
+Name of Quantlet: Crawl_cryptocurrencies
+
+Published in:  SDA_2020_NCTU
+
+Description: Crawling cryptocurrencies data from coinmarketcap.com using beautifulsoup library from python language programming, and store it into csv file
+
+Keywords: web crawling, cryptocurrencies, blockchain, CRIX analysis, coinmarketcap
+
+See also: CRIX
+
+Author: Muhaimin 20201107
