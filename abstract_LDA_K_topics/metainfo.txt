@@ -1,4 +1,4 @@
-Name of Quantlet: Abstract_LDA_K_topics
+Name of Quantlet: abstract_LDA_K_topics
 
 Published in:  SDA_2020_NCTU
 
