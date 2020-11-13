@@ -1,0 +1,10 @@
+Name of Quantlet: Polar_coordinate_exponential
+
+Published in:  SDA_2020_NCTU
+
+Description: Create a function that can generate exponential distribution from polar coordinate. The basic idea is from muller-box transformation.
+
+Keywords: polar coordinate, exponential distribution, muller-box transform, normal distribution, generate
+
+See also: FittingElephant
+Author: Muhaimin 20201113
