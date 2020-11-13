@@ -1,0 +1,15 @@
+Name of Quantlet: '2D_Normal_Polar'
+
+Published in: 'SDA_2020_NCTU'
+
+Description: 'Generating 2D Normal Distribution with Polar Coordinates'
+
+Submitted: '13 Nov 2020'
+
+Keywords: '2D, normal, polar, exponential, box-muller'
+
+Input:
+
+Output: 
+
+Author: 'Susan'
