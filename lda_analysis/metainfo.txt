@@ -4,9 +4,11 @@ Published in :  SDA_2020_NCTU
 Description :  perform LDA Analysis on given dataset
 
 Keywords : 
-- LDA Analysis
-- Topic Modelling
-- Heatmap
+- LDA analysis
+- topic modelling
+- heatmap
+- word frequency
+- text mining
 
 
 Author : Huong Vu 0856156
