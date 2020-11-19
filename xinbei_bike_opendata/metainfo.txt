@@ -2,11 +2,13 @@ Name of Quantlet : xinbei_bike_opendata
 
 Published in :  SDA_2020_NCTU
 
-Description :  Extract open data of Xinbei bike and provide a simple scatter plot
+Description :  Extract open data of Xinbei bike
 
 Keywords : 
+- Xinbei bike
 - webcrawling
 - open data
 - online json data
+- scatter plot
 
 Author : Huong Vu 0856156
