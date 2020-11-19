@@ -1,0 +1,14 @@
+Name of Quantlet : xinbei_bike_opendata
+
+Published in :  SDA_2020_NCTU
+
+Description :  generate normal distribution using Box-Muller method
+
+Keywords : 
+- polar coordinates
+- normal distrubtion
+- probability
+- box-muller
+- distribution generation
+
+Author : Huong Vu 0856156
