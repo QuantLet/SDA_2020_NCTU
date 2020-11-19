@@ -1,0 +1,14 @@
+Name of Quantlet : drawing_animal
+
+Published in :  SDA_2020_NCTU
+
+Description : draw moving animal 
+
+Keywords : 
+- complex analysis
+- polar coordinates
+- fourier Transform
+- moving animal
+- happy hippo
+
+Author : Huong Vu 0856156
