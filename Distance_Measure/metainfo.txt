@@ -1,0 +1,13 @@
+Name of Quantlet: 'Distance_Measure'
+
+Published in: 'SDA_2020_NCTU'
+
+Description: 'Distance measure for continuous variables using Euclidian/Mannheim/Maximum methods'
+
+Submitted: '19 Nov 2020'
+
+Keywords: 'distance measure, Euclidian, Mannheim, Maximum, continuous variables'
+
+input: 'ushealth05.csv'
+
+Author: 'Susan'
