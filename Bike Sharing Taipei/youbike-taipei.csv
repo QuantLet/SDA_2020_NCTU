@@ -1,0 +1,400 @@
+num;retCode;sno;tot;sbi;mday;lat;lng;sarean;snaen
+1;1;1;180;32;2.0201E+13;25.04085789;121.5679044;  Xinyi Dist.;  MRT Taipei City Hall Stataion(Exit 3)-2
+2;1;2;48;11;2.0201E+13;25.041254;121.55742;  Daan Dist.;  MRT S.Y.S Memorial Hall Stataion(Exit 2.)
+3;1;3;40;19;2.0201E+13;25.03779722;121.5651694;  Xinyi Dist.;  Taipei City Hall
+4;1;4;60;36;2.0201E+13;25.03603611;121.562325;  Xinyi Dist.;  Citizen Square
+5;1;5;60;13;2.0201E+13;25.03656389;121.5686639;  Xinyi Dist.;  Xingya Jr. High School
+6;1;6;80;9;2.0201E+13;25.034047;121.565973;  Xinyi Dist.;  NAN SHAN PLAZA
+7;1;7;80;43;2.0201E+13;25.03303889;121.5656194;  Xinyi Dist.;  Xinyi Square(Taipei 101)
+8;1;8;60;16;2.0201E+13;25.03521389;121.5636889;  Xinyi Dist.;  TWTC Exhibition Hall 3
+9;1;9;40;25;2.0201E+13;25.031785;121.57448;  Xinyi Dist.;  Songde
+10;1;10;54;1;2.0201E+13;25.02866111;121.5661167;  Xinyi Dist.;  Emergency Operations Center of Taipei City
+11;1;11;50;0;2.0201E+13;25.034937;121.55762;  Xinyi Dist.;  Sanchangli
+12;1;12;48;7;2.0201E+13;25.026679;121.561747;  Xinyi Dist.;  Taipei Medical University
+13;1;13;58;27;2.0201E+13;25.03809;121.58367;  Xinyi Dist.;  Fude Park
+14;1;14;32;1;2.0201E+13;25.06424;121.54037;  Zhongshan Dist.;  Rongxing Park
+16;1;16;48;26;2.0201E+13;25.036084;121.579135;  Xinyi Dist.;  Songshan Vocational High School
+17;1;17;34;6;2.0201E+13;25.05862;121.55514;  Songshan Dist.;  Minsheng & Guangfu Intersection
+18;1;18;40;2;2.0201E+13;25.049408;121.55261;  Songshan Dist.;  Taipei City Arts Promotion Office
+19;1;19;30;15;2.0201E+13;25.02863;121.56981;  Xinyi Dist.;  Xiangshan Park
+20;1;20;58;0;2.0201E+13;25.025896;121.543293;  Daan Dist.;  MRT Technology Bldg. Sta.
+21;1;21;66;29;2.0201E+13;25.057985;121.548982;  Songshan Dist.;  Minsheng & Dunhua Intersection
+22;1;22;44;16;2.0201E+13;25.048824;121.57845;  Xinyi Dist.;  Songshan Rail Sta.
+23;1;23;32;10;2.0201E+13;25.055074;121.602798;  Nangang Dist.;  Dongxin Elementary School
+24;1;24;46;0;2.0201E+13;25.03293;121.53747;  Daan Dist.;  Xinyi & Jianguo Intersection
+25;1;25;30;3;2.0201E+13;25.04543;121.57205;  Xinyi Dist.;  Yongji & Songxin Intersection
+26;1;26;72;39;2.0201E+13;25.050142;121.592375;  Nangang Dist.;  MRT Kunyang Sta. (Exit 1)
+27;1;27;38;18;2.0201E+13;25.05469;121.61669;  Nangang Dist.;  MRT Nangang Exhibition Center Sta. (Exit 5)
+28;1;28;32;7;2.0201E+13;25.04814;121.57467;  Xinyi Dist.;  Wuchang Park
+29;1;29;54;35;2.0201E+13;25.03164;121.52655;  Daan Dist.;  Jinshan & Aiguo Intersection
+30;1;30;74;50;2.0201E+13;25.017054;121.544352;  Daan Dist.;  Keelung & Changxing Intersection
+31;1;31;30;8;2.0201E+13;25.022413;121.53456;  Daan Dist.;  Xinhai & Xinsheng Intersection
+32;1;32;38;4;2.0201E+13;25.023884;121.553161;  Daan Dist.;  MRT Liuzhangli Sta.
+33;1;33;46;21;2.0201E+13;25.04878;121.56087;  Songshan Dist.;  Zhonglun High School
+34;1;34;32;0;2.0201E+13;25.058369;121.532934;  Zhongshan Dist.;  MRT Xingtian Temple Sta. (Exit 1)
+35;1;35;30;1;2.0201E+13;25.059978;121.533302;  Zhongshan Dist.;  MRT Xingtian Temple Sta. (Exit 3)
+36;1;36;72;7;2.0201E+13;25.02101;121.54153;  Daan Dist.;  NTU Information Bldg.
+37;1;37;46;1;2.0201E+13;25.0337;121.528988;  Daan Dist.;  MRT Dongmen Sta. (Exit 4)
+38;1;38;32;15;2.0201E+13;25.026603;121.52944;  Daan Dist.;  NTNU Library
+39;1;39;26;14;2.0201E+13;25.058;121.61422;  Nangang Dist.;  Nangang Park
+40;1;40;34;2;2.0201E+13;25.04287;121.5864;  Nangang Dist.;  Yucheng Park
+41;1;41;30;8;2.0201E+13;25.047425;121.613706;  Nangang Dist.;  Academia Park
+42;1;42;38;24;2.0201E+13;25.04431;121.58174;  Xinyi Dist.;  MRT Houshanpi Sta.(Exit 1)
+43;1;43;30;8;2.0201E+13;25.035639;121.614154;  Nangang Dist.;  Linyun Market
+44;1;44;36;27;2.0201E+13;25.05973;121.616187;  Nangang Dist.;  MRT Nangang Software Park Sta.(Exit 2)
+45;1;45;30;2;2.0201E+13;25.01476;121.534538;  Daan Dist.;  MRT Gongguan Sta.(Exit 2)
+46;1;46;58;28;2.0201E+13;25.056504;121.611389;  Nangang Dist.;  Nangang Elementary School
+47;1;47;34;0;2.0201E+13;25.042275;121.533939;  Daan Dist.;  MRT Zhongxiao Xinsheng Sta.(Exit 4)
+48;1;48;38;2;2.0201E+13;25.05247;121.608202;  Nangang Dist.;  Nangang Rail Sta.(Zhongxiao E.Rd.)
+49;1;49;52;5;2.0201E+13;25.040901;121.548252;  Daan Dist.;  Longmen Square
+50;1;50;52;6;2.0201E+13;25.062002;121.560186;  Songshan Dist.;  MinQuan Park
+51;1;51;44;6;2.0201E+13;25.065031;121.536775;  Zhongshan Dist.;  Jianguo & Nongan Intersection
+52;1;52;30;14;2.0201E+13;25.054761;121.536925;  Zhongshan Dist.;  Jianguo & Changchun Intersection
+53;1;53;26;14;2.0201E+13;25.044781;121.536609;  Zhongshan Dist.;  Bade Market
+54;1;54;30;0;2.0201E+13;25.028798;121.538073;  Daan Dist.;  Taipei Public Library
+55;1;55;46;27;2.0201E+13;25.049505;121.549408;  Songshan Dist.;  Taipei Stadium
+56;1;56;42;27;2.0201E+13;25.038954;121.522334;  Zhongzheng Dist.;  Renai & Linsen Intersection
+57;1;57;46;1;2.0201E+13;25.026217;121.53519;  Daan Dist.;  Xinsheng & Heping Intersection
+58;1;58;48;0;2.0201E+13;25.045267;121.5222;  Zhongzheng Dist.;  MRT Shandao Temple Sta(Exit 1)
+59;1;59;32;15;2.0201E+13;25.052227;121.525805;  Zhongshan Dist.;  Linsen Park
+60;1;60;30;13;2.0201E+13;25.064317;121.533487;  Zhongshan Dist.;  Zhongshan Dist. Admin. Office
+61;1;61;86;0;2.0201E+13;25.0131;121.539723;  Daan Dist.;  N.T.U.S.T
+62;1;62;34;21;2.0201E+13;25.026827;121.520258;  Zhongzheng Dist.;  Nanchang Park
+63;1;63;36;9;2.0201E+13;25.037569;121.545632;  Daan Dist.;  Taipei City Hospital Renai Branch
+64;1;64;50;38;2.0201E+13;25.037773;121.517029;  Zhongzheng Dist.;  National Central Library
+65;1;65;38;3;2.0201E+13;25.022725;121.502708;  Wanhua Dist.;  Youth Park(Exit 3)
+66;1;66;42;11;2.0201E+13;25.007528;121.537188;  Wenshan Dist.;  NTNU Gongguan Campus
+67;1;67;48;13;2.0201E+13;25.042973;121.516428;  Zhongzheng Dist.;  MRT Nat’l Taiwan U. Hospital Sta.(Exit 4)
+68;1;68;36;1;2.0201E+13;25.025865;121.506536;  Wanhua Dist.;  Guoxing & Qingnian Intersection
+69;1;69;34;14;2.0201E+13;24.999837;121.547778;  Wenshan Dist.;  Xingfong Park
+70;1;70;52;31;2.0201E+13;25.032752;121.561645;  Xinyi Dist.;  MRT Taipei 101/World Trade Center Sta.
+71;1;71;30;0;2.0201E+13;25.032985;121.554204;  Daan Dist.;  MRT Xinyi Anhe Sta.(Exit.4)
+72;1;72;42;9;2.0201E+13;25.048611;121.529346;  Zhongshan Dist.;  Xinsheng & Changan Intersection
+73;1;73;32;13;2.0201E+13;25.072228;121.510195;  Datong Dist.;  Jiuquan & Yanping Intersection
+74;1;74;40;1;2.0201E+13;25.033817;121.530547;  Zhongzheng Dist.;  Xinyi & Lianyun Intersection
+75;1;75;30;1;2.0201E+13;25.0300508;121.557635;  Xinyi Dist.;  Keelung & Guangfu Intersection
+76;1;76;36;11;2.0201E+13;25.056387;121.527522;  Zhongshan Dist.;  Xinsheng & Changchun Intersection
+77;1;77;32;1;2.0201E+13;25.059147;121.56297;  Songshan Dist.;  Minsheng Activity Center
+78;1;78;52;10;2.0201E+13;25.071824;121.519287;  Datong Dist.;  MRT Yuanshan Sta. (Exit 2)
+79;1;79;50;36;2.0201E+13;25.061285;121.520205;  Datong Dist.;  MRT Minquan W.Rd. Sta.(Exit 3)
+80;1;80;44;12;2.0201E+13;25.02751;121.495869;  Wanhua Dist.;  Huajiang High School
+81;1;81;40;4;2.0201E+13;25.020547;121.528552;  Daan Dist.;  MRT Taipower Building Sta. (Exit 2)
+82;1;82;60;13;2.0201E+13;25.041778;121.508693;  Zhongzheng Dist.;  MRT Ximen Sta.(Exit 3)
+83;1;83;74;0;2.0201E+13;25.033344;121.534236;  Daan Dist.;  MRT Daan Park Sta.
+84;1;84;38;6;2.0201E+13;25.029705;121.502899;  Wanhua Dist.;  Fuhua Garden New Village(City)
+85;1;85;46;16;2.0201E+13;25.033362;121.54911;  Daan Dist.;  Xinyi & Dunhua Intersection
+86;1;86;36;9;2.0201E+13;25.062344;121.545138;  Songshan Dist.;  Minquan & Fuxing Intersection
+87;1;87;48;0;2.0201E+13;25.033078;121.543057;  Daan Dist.;  MRT Daan Sta.
+88;1;88;62;1;2.0201E+13;25.032922;121.57087;  Xinyi Dist.;  MRT Xiangshan Sta.
+89;1;89;44;17;2.0201E+13;25.027323;121.516385;  Zhongzheng Dist.;  Heping Chongqing Intersection
+90;1;90;44;0;2.0201E+13;25.037783;121.501708;  Wanhua Dist.;  Laosong Elementary School
+91;1;91;36;23;2.0201E+13;25.070629;121.523268;  Zhongshan Dist.;  Taipei Fine Arts Museum
+92;1;92;42;7;2.0201E+13;25.046618;121.507169;  Wanhua Dist.;  Kaifong & Xining Intersection
+93;1;93;56;7;2.0201E+13;25.023877;121.569836;  Xinyi Dist.;  Wu Xing Bus Station.
+94;1;94;52;27;2.0201E+13;24.993254;121.541059;  Wenshan Dist.;  MRT Jingmei Sta.
+95;1;95;32;8;2.0201E+13;25.023393;121.497679;  Wanhua Dist.;  Dongyuan Elementary School
+96;1;96;30;3;2.0201E+13;25.061567;121.566558;  Songshan Dist.;  Sanmin Park
+97;1;97;52;26;2.0201E+13;25.082825;121.524721;  Shilin Dist.;  MRT Jiantan Sta.(Exit 2)
+98;1;98;42;12;2.0201E+13;24.999378;121.540197;  Wenshan Dist.;  Roosevelt & Jinglong Intersection
+99;1;99;42;0;2.0201E+13;25.057866;121.520711;  Datong Dist.;  MRT Shuanglian Sta. (Exit 2)
+100;1;100;40;18;2.0201E+13;25.045753;121.530697;  Zhongzheng Dist.;  Jinshen & Civic Blvd. Intersection
+101;1;101;50;0;2.0201E+13;25.043668;121.528487;  Zhongzheng Dist.;  Huashan 1914‧Creative Park
+102;1;102;32;6;2.0201E+13;25.02043;121.525322;  Zhongzheng Dist.;  Taipei City Hakka Cultural Park
+103;1;103;60;11;2.0201E+13;25.033639;121.503028;  Wanhua Dist.;  Wanhua Rail Sta.
+104;1;104;38;21;2.0201E+13;25.004023;121.54074;  Wenshan Dist.;  Taipei Pot Plant Auction
+105;1;105;42;5;2.0201E+13;25.044412;121.505409;  Wanhua Dist.;  Emei Parking Lot
+106;1;106;44;9;2.0201E+13;25.032932;121.497674;  Wanhua Dist.;  Xiyuan & Bangka Intersection
+107;1;107;54;35;2.0201E+13;25.036402;121.509422;  Zhongzheng Dist.;  MRT Xiaonanmen Sta. (Exit 1)
+108;1;108;32;3;2.0201E+13;25.073306;121.515843;  Datong Dist.;  Taipei Confucius Temple
+109;1;109;36;2;2.0201E+13;25.071606;121.530805;  Zhongshan Dist.;  Lin An-tai Historical House
+110;1;110;44;8;2.0201E+13;25.086376;121.560888;  Neihu Dist.;  Wenhu Elementary School
+111;1;111;54;3;2.0201E+13;25.040184;121.543497;  Daan Dist.;  MRT Zhongxiao Fuxing Sta.(Exit 2)
+112;1;112;48;30;2.0201E+13;25.137456;121.503124;  Beitou Dist.;  MRT Xinbeitou Sta.
+113;1;113;38;3;2.0201E+13;25.037724;121.561178;  Xinyi Dist.;  Renai & Yixian Intersection
+114;1;114;30;10;2.0201E+13;25.109908;121.530386;  Shilin Dist.;  Lanya Park
+115;1;115;68;15;2.0201E+13;25.048222;121.520526;  Zhongzheng Dist.;  Taipei Bus Sta.
+116;1;116;44;16;2.0201E+13;25.096122;121.530215;  Shilin Dist.;  Fulin Park
+117;1;117;58;8;2.0201E+13;25.132581;121.498618;  Beitou Dist.;  MRT Beitou Sta.
+118;1;118;36;4;2.0201E+13;25.136929;121.499152;  Beitou Dist.;  Daye & Datong Intersection
+119;1;119;68;31;2.0201E+13;25.08418;121.555116;  Zhongshan Dist.;  MRT Jiannan Rd. Sta.(Exit 2)
+120;1;120;46;6;2.0201E+13;25.035479;121.50026;  Wanhua Dist.;  MRT Longshan Temple Sta. (Exit. 1)
+121;1;121;66;24;2.0201E+13;25.05298;121.540568;  Zhongshan Dist.;  Longjiang & Nanjing Intersection
+122;1;122;50;9;2.0201E+13;25.079666;121.57584;  Neihu Dist.;  MRT Gangqian Sta. (Exit 2)
+123;1;123;44;7;2.0201E+13;25.116325;121.534136;  Shilin Dist.;  Tienmu Sports Park
+124;1;124;36;3;2.0201E+13;25.115863;121.518163;  Beitou Dist.;  Zenhua Park
+125;1;125;30;4;2.0201E+13;25.038609;121.498495;  Wanhua Dist.;  Huaxi Park
+126;1;126;30;14;2.0201E+13;25.022073;121.548336;  Daan Dist.;  Dunhua & Keelung Intersection
+127;1;127;40;13;2.0201E+13;25.073277;121.619521;  Neihu Dist.;  Donghu Junior High School
+128;1;128;36;4;2.0201E+13;25.026808;121.546726;  Daan Dist.;  Chengong Public Housing
+129;1;129;50;9;2.0201E+13;25.078424;121.58456;  Neihu Dist.;  MRT Wende Sta. (Exit 2)
+130;1;130;26;5;2.0201E+13;25.031445;121.519411;  Zhongzheng Dist.;  Roosevelt & Ningbo E. St. Intersection
+131;1;131;52;23;2.0201E+13;25.079322;121.568688;  Neihu Dist.;  Zhouzhi Park No.2
+132;1;132;88;0;2.0201E+13;25.01603085;121.5331757;  Daan Dist.;  Roosevelt & Xinsheng S. Intersection
+133;1;133;40;6;2.0201E+13;25.111839;121.525888;  Shilin Dist.;  Lanxing Park
+134;1;134;64;11;2.0201E+13;25.10336;121.522629;  Shilin Dist.;  MRT Zhishan Sta.(Exit 2)
+135;1;135;54;15;2.0201E+13;25.114513;121.515677;  Beitou Dist.;  MRT Shipai Sta. (Exit 2)
+136;1;136;30;14;2.0201E+13;25.117457;121.51668;  Beitou Dist.;  NTUNHS
+137;1;137;46;19;2.0201E+13;25.137976;121.493066;  Beitou Dist.;  Nat’l Defense U.
+138;1;138;30;2;2.0201E+13;25.040558;121.575372;  Xinyi Dist.;  MRT Yongchun Sta. (Exit 2)
+139;1;139;38;11;2.0201E+13;25.054501;121.510549;  Datong Dist.;  Yongle Market
+140;1;140;46;5;2.0201E+13;25.063404;121.512909;  Datong Dist.;  MRT Daqiaotou Sta. (Exit 2)
+141;1;141;36;13;2.0201E+13;24.989902;121.569984;  Wenshan Dist.;  Wenshan Dist. Admin. Center
+142;1;142;52;19;2.0201E+13;24.997996;121.57444;  Wenshan Dist.;  MRT Muzha Sta.
+143;1;143;72;11;2.0201E+13;24.997659;121.578752;  Wenshan Dist.;  MRT Taipei Zoo Sta.(Exit 2)
+144;1;144;58;20;2.0201E+13;24.988363;121.576536;  Wenshan Dist.;  Nat’l Chengchi U.
+145;1;145;40;20;2.0201E+13;25.066688;121.516149;  Datong Dist.;  Shude Park
+146;1;146;46;3;2.0201E+13;25.092546;121.526556;  Shilin Dist.;  MRT Shilin Sta.(Exit 2)
+147;1;147;32;1;2.0201E+13;25.089175;121.521814;  Shilin Dist.;  Shilin Sports Center
+148;1;148;68;1;2.0201E+13;25.110331;121.518316;  Beitou Dist.;  MRT Mingde Sta.
+149;1;149;62;22;2.0201E+13;25.116665;121.509621;  Beitou Dist.;  Beitou Sports Center
+150;1;150;38;13;2.0201E+13;25.036568;121.57343;  Xinyi Dist.;  Songde Park
+151;1;151;34;21;2.0201E+13;24.987507;121.549827;  Wenshan Dist.;  Examination Yuan
+152;1;152;40;0;2.0201E+13;25.08521;121.519175;  Shilin Dist.;  Bailing Elementary School
+153;1;153;36;12;2.0201E+13;25.059885;121.516299;  Datong Dist.;  Jiang Wei-shui Memorial Park
+154;1;154;38;18;2.0201E+13;25.093396;121.519867;  Shilin Dist.;  Zhongzheng & Jihe Intersection
+155;1;155;30;9;2.0201E+13;25.076193;121.57505;  Neihu Dist.;  Ruiguang & Gangqian Intersection
+156;1;156;38;9;2.0201E+13;25.06853;121.61538;  Neihu Dist.;  Donghu Elementary School
+157;1;157;42;4;2.0201E+13;25.082703;121.571467;  Neihu Dist.;  Lishan Elementary School
+158;1;158;48;24;2.0201E+13;25.067026;121.61355;  Neihu Dist.;  MRT Donghu Sta.
+159;1;159;36;1;2.0201E+13;25.082866;121.566695;  Neihu Dist.;  MRT Xihu Sta. (Exit 1)
+161;1;161;56;12;2.0201E+13;25.131143;121.503768;  Beitou Dist.;  Dafong Park
+162;1;162;70;0;2.0201E+13;25.062924;121.52772;  Zhongshan Dist.;  MRT Zhongshan Elementary School sta.(Exit 4)
+163;1;163;72;38;2.0201E+13;25.018097;121.559279;  Daan Dist.;  MRT Linguang Sta.
+164;1;164;56;25;2.0201E+13;25.126286;121.500801;  Beitou Dist.;  MRT Qiyan Sta.
+165;1;165;62;7;2.0201E+13;25.120788;121.505693;  Beitou Dist.;  MRT Qilian Sta. (Exit 2)
+166;1;166;34;3;2.0201E+13;24.980602;121.556177;  Wenshan Dist.;  Taipei JingMei Girls High School
+167;1;167;50;25;2.0201E+13;25.095714;121.518046;  Shilin Dist.;  Taipei Astronomical Museum
+168;1;168;44;8;2.0201E+13;25.02288;121.522855;  Zhongzheng Dist.;  Heti Elementary School
+169;1;169;44;21;2.0201E+13;25.030015;121.509813;  Zhongzheng Dist.;  Taipei Botanical Garden
+170;1;170;50;7;2.0201E+13;25.059245;121.568883;  Songshan Dist.;  XinDong Park
+171;1;171;38;8;2.0201E+13;24.996842;121.559651;  Wenshan Dist.;  Taipei Wen Shan Sports Center
+172;1;172;24;0;2.0201E+13;25.051562;121.562891;  Songshan Dist.;  MRT Nanjing Sanmin Sta. (Exit 1)
+173;1;173;56;39;2.0201E+13;25.052181;121.533211;  Zhongshan Dist.;  MRT Songjiang Nanjing Sta. (Exit 7)
+174;1;174;48;31;2.0201E+13;25.051702;121.553057;  Songshan Dist.;  MRT Taipei Arena Sta. (Exit 5)
+175;1;175;52;42;2.0201E+13;25.051618;121.544847;  Songshan Dist.;  MRT Nanjing Fuxing Sta. (Exit 5)
+176;1;176;94;18;2.0201E+13;25.055997;121.542318;  Zhongshan Dist.;  Xingan Huacheng Community
+177;1;177;40;11;2.0201E+13;25.082538;121.507495;  Shilin Dist.;  Hulu Elementary School
+178;1;178;32;7;2.0201E+13;25.078908;121.510306;  Shilin Dist.;  Yanping Public Housing
+179;1;179;52;1;2.0201E+13;25.041355;121.59073;  Nangang Dist.;  Nangang Park
+180;1;180;40;14;2.0201E+13;25.06877;121.592654;  Neihu Dist.;  Fuhua Market
+181;1;181;52;3;2.0201E+13;25.02585;121.537383;  Daan Dist.;  JianGuo & Heping Intersection
+182;1;182;50;41;2.0201E+13;25.0253;121.523537;  Zhongzheng Dist.;  MRT Guting Sta. (Exit 2)
+183;1;183;32;15;2.0201E+13;25.05379;121.514179;  Datong Dist.;  Yuanhuan
+184;1;184;42;3;2.0201E+13;25.084759;121.537892;  Zhongshan Dist.;  Jiantan Community
+185;1;185;30;0;2.0201E+13;25.042342;121.54605;  Daan Dist.;  LiuGong Park
+186;1;186;82;70;2.0201E+13;25.035414;121.514218;  Zhongzheng Dist.;  University of Taipei
+187;1;187;34;20;2.0201E+13;25.037465;121.555769;  Daan Dist.;  Renai & Yanji Intersection
+188;1;188;56;8;2.0201E+13;25.090293;121.50189;  Shilin Dist.;  Taipei Municipal Shezi Elementary School
+189;1;189;38;23;2.0201E+13;25.087987;121.58781;  Neihu Dist.;  JinRui Park
+190;1;190;40;0;2.0201E+13;25.079278;121.546683;  Zhongshan Dist.;  MRT Dazhi Sta. (Exit 3)
+191;1;191;58;23;2.0201E+13;25.083873;121.60206;  Neihu Dist.;  MRT Dahu Park Sta. (Exit 2)
+192;1;192;44;12;2.0201E+13;25.072485;121.607955;  Neihu Dist.;  MRT Huzhou Sta. (Exit 1)
+193;1;193;36;6;2.0201E+13;25.041277;121.61935;  Nangang Dist.;  Jiuzhuang Recreation Center
+194;1;194;50;3;2.0201E+13;25.047958;121.524388;  Zhongshan Dist.;  Civic Blvd Linsen Intersection
+195;1;195;50;43;2.0201E+13;25.035851;121.523987;  Zhongzheng Dist.;  Xinyi Hangzhou Intersection(Chunghwa Telecom)
+196;1;196;20;7;2.0201E+13;25.068744;121.589233;  Neihu Dist.;  Xinhu Elementary School
+197;1;197;34;5;2.0201E+13;25.049845;121.571885;  Songshan Dist.;  Raohe Night Market
+201;1;201;44;16;2.0201E+13;25.057164;121.597924;  Nangang Dist.;  Dongyang Park
+202;1;202;60;21;2.0201E+13;25.124646;121.467336;  Beitou Dist.;  MRT Guandu Sta.
+203;1;203;40;3;2.0201E+13;25.024487;121.51057;  Wanhua Dist.;  Guting Junior High School
+204;1;204;42;13;2.0201E+13;25.113625;121.53742;  Shilin Dist.;  University of Taipei Tianmu Campus
+205;1;205;24;10;2.0201E+13;24.988241;121.55561;  Wenshan Dist.;  Mucha Guanghui Intersection
+206;1;206;32;16;2.0201E+13;25.005386;121.55716;  Wenshan Dist.;  MRT Xinhai Sta.
+207;1;207;30;8;2.0201E+13;25.103242;121.487477;  Shilin Dist.;  Fu-an Junior Hight School
+208;1;208;46;5;2.0201E+13;25.035555;121.495342;  Wanhua Dist.;  Longshan Elementary School
+209;1;209;42;14;2.0201E+13;25.137837;121.486071;  Beitou Dist.;  MRT Fuxinggang Sta.
+210;1;210;60;5;2.0201E+13;25.079766;121.558135;  Zhongshan Dist.;  Lequn 2nd & Jingye 4th Intersection
+211;1;211;40;14;2.0201E+13;25.080915;121.597339;  Neihu Dist.;  Xingyun & Jinhu Intersection
+212;1;212;50;21;2.0201E+13;25.084223;121.549452;  Zhongshan Dist.;"  """"Beian & Dazhi Intersection"""""
+213;1;213;30;9;2.0201E+13;25.107782;121.523107;  Shilin Dist.;  Lanya Elementary School
+214;1;214;54;20;2.0201E+13;25.055935;121.578645;  Neihu Dist.;  Jihe First Phase Republic Housing
+215;1;215;62;5;2.0201E+13;25.04993;121.510367;  Datong Dist.;  MRT Beimen Sta. (Exit.3)
+216;1;216;50;26;2.0201E+13;25.082553;121.544601;  Zhongshan Dist.;  Peiying Park
+217;1;217;40;11;2.0201E+13;25.062645;121.574267;  Neihu Dist.;  Taipei Flowers Auction
+218;1;218;42;20;2.0201E+13;25.043299;121.564108;  Xinyi Dist.;  SONG-SHAN Senior High School
+219;1;219;38;12;2.0201E+13;25.031147;121.49074;  Wanhua Dist.;  Dali High School
+220;1;220;36;12;2.0201E+13;25.059162;121.510512;  Datong Dist.;  Dadaocheng Park
+221;1;221;40;1;2.0201E+13;25.019276;121.57107;  Xinyi Dist.;  Taihe Park
+222;1;222;30;17;2.0201E+13;25.064108;121.522065;  Zhongshan Dist.;  Fushun Park
+223;1;223;40;8;2.0201E+13;25.1274;121.507267;  Beitou Dist.;  Qingjiang Elementary School
+224;1;224;40;6;2.0201E+13;25.088243;121.510535;  Shilin Dist.;  Shezheng Park
+225;1;225;40;8;2.0201E+13;25.0186;121.554839;  Daan Dist.;  Wolong & Leye Intersection
+226;1;226;32;20;2.0201E+13;25.054365;121.594228;  Nangang Dist.;  Xiangyang & Nangang Intersection
+227;1;227;40;7;2.0201E+13;25.084244;121.57668;  Neihu Dist.;  LiShan High School
+228;1;228;32;17;2.0201E+13;24.998811;121.56789;  Wenshan Dist.;  MRT Wanfang Community Sta.
+229;1;229;34;9;2.0201E+13;25.049394;121.514611;  Datong Dist.;  Civic & Taiyuan Intersection
+230;1;230;36;2;2.0201E+13;25.075366;121.580811;  Neihu Dist.;  Huguang Republic Housing
+231;1;231;40;14;2.0201E+13;25.047805;121.545022;  Songshan Dist.;  Construction & Planning Agency
+232;1;232;44;4;2.0201E+13;25.118843;121.529738;  Shilin Dist.;  Zhongshan & Tianmu Intersection
+233;1;233;50;15;2.0201E+13;25.131411;121.474155;  Beitou Dist.;  MRT Zhongyi Sta.
+234;1;234;38;3;2.0201E+13;25.124162;121.526071;  Beitou Dist.;  Yongxin Green Area
+235;1;235;30;18;2.0201E+13;25.04846;121.565928;  Songshan Dist.;  Civic Blvd & Dongxing Intersection
+236;1;236;36;3;2.0201E+13;25.119292;121.469138;  Beitou Dist.;  Guandu Nature Park
+237;1;237;38;1;2.0201E+13;25.001149;121.551418;  Wenshan Dist.;  Wenshan 2nd District Office
+238;1;238;32;11;2.0201E+13;25.073119;121.575965;  Neihu Dist.;  Ruihu & Yangguang Intersection
+239;1;239;18;7;2.0201E+13;25.056641;121.583403;  Neihu Dist.;  Ln. 262.
+240;1;240;58;0;2.0201E+13;25.052141;121.536802;  Zhongshan Dist.;  Nanjing Jianguo Intersection
+241;1;241;38;2;2.0201E+13;25.038943;121.579146;  Xinyi Dist.;  Linkou Park
+242;1;242;40;21;2.0201E+13;25.117472;121.463161;  Beitou Dist.;  Kuantu Temple
+243;1;243;30;4;2.0201E+13;25.090202;121.506219;  Shilin Dist.;  Shezi Park
+244;1;244;46;18;2.0201E+13;25.045908;121.543736;  Zhongshan Dist.;  Fuxing & Civic Intersection
+245;1;245;44;32;2.0201E+13;25.060632;121.544028;  Zhongshan Dist.;  MRT Zhongshan Junior High School Sta.
+246;1;246;40;8;2.0201E+13;25.098743;121.548086;  Shilin Dist.;  National Palace Museum
+247;1;247;34;5;2.0201E+13;24.987144;121.560627;  Wenshan Dist.;  Mucha Park
+248;1;248;32;0;2.0201E+13;25.027123;121.555566;  Daan Dist.;  George Vocational High School of Taipei
+249;1;249;32;16;2.0201E+13;25.037706;121.506624;  Wanhua Dist.;  Zhonghua & Guilin Intersection
+250;1;250;38;2;2.0201E+13;25.04184;121.539873;  Daan Dist.;  Ln. 217
+251;1;251;36;4;2.0201E+13;25.083023;121.520692;  Shilin Dist.;  Hualing Park
+252;1;252;34;23;2.0201E+13;25.020544;121.545608;  Daan Dist.;  Daan Sports Center
+253;1;253;34;21;2.0201E+13;25.101423;121.52799;  Shilin Dist.;  Zhishan Pumping Sta.
+254;1;254;58;38;2.0201E+13;25.125377;121.471482;  Beitou Dist.;  Ligong Lide Intersection
+255;1;255;30;11;2.0201E+13;25.046914;121.557674;  Songshan Dist.;  Ln. 22
+256;1;256;40;10;2.0201E+13;25.096507;121.527526;  Shilin Dist.;  Zhongshan & Zhongzheng  Intersection
+257;1;257;34;1;2.0201E+13;25.023316;121.492637;  Wanhua Dist.;  Jinde Park
+258;1;258;40;20;2.0201E+13;25.052096;121.507979;  Datong Dist.;  Taipei City Hospital (Zhongxing Branch)
+259;1;259;36;11;2.0201E+13;25.051761;121.542168;  Zhongshan Dist.;  Nanjing & Liaoning Intersection
+260;1;260;36;13;2.0201E+13;25.068616;121.583991;  Neihu Dist.;  Minquan & Ruiguang Intersection
+261;1;261;44;1;2.0201E+13;25.054095;121.560928;  Songshan Dist.;  Jiankang New Village
+262;1;262;28;6;2.0201E+13;24.984144;121.569064;  Wenshan Dist.;  YONG AN ART CENTER - Performing Arts School 36
+263;1;263;38;23;2.0201E+13;25.097103;121.542153;  Shilin Dist.;  Zhishan Linxi Intersection
+264;1;264;28;12;2.0201E+13;25.145936;121.493009;  Beitou Dist.;  Xiushan Community Center
+265;1;265;30;13;2.0201E+13;25.135394;121.478;  Beitou Dist.;  Ln. 30
+266;1;266;34;23;2.0201E+13;25.080258;121.564806;  Neihu Dist.;  Zhouzhi Park No.1
+267;1;267;38;9;2.0201E+13;25.05062;121.580194;  Nangang Dist.;  Bade & Zhongpo Intersection
+268;1;268;30;9;2.0201E+13;25.056655;121.607055;  Nangang Dist.;  Nangang Vocational High School
+269;1;269;30;13;2.0201E+13;25.070723;121.590304;  Neihu Dist.;  Tri-Service General Hospital
+270;1;270;34;24;2.0201E+13;25.105429;121.529217;  Shilin Dist.;  Yu Nong Elementary School
+271;1;271;28;18;2.0201E+13;25.048334;121.534693;  Zhongshan Dist.;"  """"Yitong & Changan Intersection"""""
+272;1;272;32;7;2.0201E+13;24.984707;121.563125;  Wenshan Dist.;  Zhongshun Public Places
+273;1;273;38;5;2.0201E+13;25.110437;121.535954;  Shilin Dist.;  Zhishan Elementary School
+274;1;274;34;10;2.0201E+13;25.066997;121.579833;  Neihu Dist.;  Rotary Park
+275;1;275;58;6;2.0201E+13;25.040988;121.507688;  Wanhua Dist.;  Nishi Honganji Square
+276;1;276;38;4;2.0201E+13;25.028679;121.55932;  Xinyi Dist.;  Sanxing Park
+277;1;277;32;22;2.0201E+13;25.044091;121.51025;  Zhongzheng Dist.;  Zhongshan Hall
+278;1;278;32;18;2.0201E+13;25.062557;121.586065;  Neihu Dist.;  MingMei Park
+279;1;279;48;11;2.0201E+13;25.053432;121.606331;  Nangang Dist.;  Nangang Rail Sta.(Xinhua Rd.)
+280;1;280;28;4;2.0201E+13;25.089034;121.51732;  Shilin Dist.;  Shilin New Village
+281;1;281;32;5;2.0201E+13;25.050245;121.532725;  Zhongshan Dist.;  Songjiang Park
+282;1;282;30;6;2.0201E+13;25.041935;121.571999;  Xinyi Dist.;  Futai Park
+283;1;283;32;9;2.0201E+13;25.127959;121.4677;  Beitou Dist.;  Ln. 540
+284;1;284;44;15;2.0201E+13;25.096166;121.522096;  Shilin Dist.;  Huasheng Park
+285;1;285;40;5;2.0201E+13;25.025966;121.51377;  Zhongzheng Dist.;  Ying-Qiao Elementary school
+286;1;286;44;21;2.0201E+13;25.086372;121.565713;  Neihu Dist.;  Takming University of Science and Technology
+287;1;287;40;9;2.0201E+13;25.066424;121.537354;  Zhongshan Dist.;  Taipei Second Fruits and Vegetables Wholesale Market
+288;1;288;62;53;2.0201E+13;25.041928;121.524591;  Zhongzheng Dist.;  Jinan & Shaosing Intersection
+289;1;289;44;4;2.0201E+13;25.023377;121.518835;  Zhongzheng Dist.;  Guling Park
+290;1;290;26;8;2.0201E+13;25.068387;121.530188;  Zhongshan Dist.;  Xinsheng Park
+291;1;291;50;3;2.0201E+13;25.049616;121.577459;  Songshan Dist.;  MRT Songshan Sta.(Exit.3)
+292;1;292;40;11;2.0201E+13;25.046361;121.582848;  Nangang Dist.;  Hesin Square
+293;1;293;40;23;2.0201E+13;25.013284;121.530037;  Zhongzheng Dist.;  Taipei Water Park
+294;1;294;36;18;2.0201E+13;25.047617;121.540431;  Zhongshan Dist.;  Zhulun Market
+295;1;295;26;0;2.0201E+13;25.023473;121.541083;  Daan Dist.;  Dunqing Park
+296;1;296;32;5;2.0201E+13;25.001545;121.536446;  Wenshan Dist.;  Wanhe Park No. 2
+297;1;297;26;17;2.0201E+13;25.041702;121.499922;  Wanhua Dist.;  Changsha Park
+298;1;298;32;12;2.0201E+13;25.056458;121.516976;  Datong Dist.;  Taiyuan & Wuyuan Intersection
+299;1;299;32;15;2.0201E+13;25.029264;121.499358;  Wanhua Dist.;  Wanhua Junior High School 
+300;1;300;28;1;2.0201E+13;25.033209;121.558731;  Xinyi Dist.;  Xinyi & Keelung Intersection
+301;1;301;28;2;2.0201E+13;25.055062;121.525383;  Zhongshan Dist.;  Linsen & Changchun Intersection
+302;1;302;40;18;2.0201E+13;25.060746;121.550711;  Songshan Dist.;  Dunbei Park
+303;1;303;34;15;2.0201E+13;25.076691;121.617085;  Neihu Dist.;  Ln. 83
+304;1;304;32;14;2.0201E+13;25.029902;121.531235;  Daan Dist.;  Jinhua Park
+305;1;305;46;13;2.0201E+13;25.087413;121.592253;  Neihu Dist.;  Bishan Park
+306;1;306;52;5;2.0201E+13;25.027781;121.52198;  Daan Dist.;  MRT Guting Sta.(Exit.6)
+307;1;307;30;9;2.0201E+13;25.03757;121.552076;  Daan Dist.;  Renai & Anhe Intersection
+308;1;308;30;12;2.0201E+13;25.055672;121.567127;  Songshan Dist.;  Xisong High School
+309;1;309;38;8;2.0201E+13;25.05447;121.556098;  Songshan Dist.;  Tri-Service General (Songshan Branch)
+310;1;310;32;17;2.0201E+13;25.057923;121.542732;  Zhongshan Dist.;  National Taipei University(Taipei Campus)
+311;1;311;30;14;2.0201E+13;25.042392;121.532229;  Zhongzheng Dist.;  MRT Zhongxiao Xinsheng Sta.(Exit.2)
+312;1;312;34;3;2.0201E+13;25.033323;121.552787;  Daan Dist.;  MRT Xinyi Anhe Sta.(Exit.1)
+313;1;313;64;26;2.0201E+13;25.04515;121.532738;  Zhongzheng Dist.;  Guang Hua Computer Market
+314;1;314;34;24;2.0201E+13;25.053614;121.54872;  Songshan Dist.;  Dunhua & Changchun Intersection
+315;1;315;38;7;2.0201E+13;25.001447;121.539037;  Wenshan Dist.;  MRT Wanlong Sta.(Exit.1)
+316;1;316;34;13;2.0201E+13;25.060911;121.54763;  Songshan Dist.;  Minyou first Park
+317;1;317;30;3;2.0201E+13;25.026823;121.491675;  Wanhua Dist.;  Shuangyuan Junior High School
+318;1;318;30;11;2.0201E+13;25.084135;121.59484;  Neihu Dist.;  Chenggong & Jinlong Intersection
+319;1;319;38;13;2.0201E+13;25.068507;121.525322;  Zhongshan Dist.;  Minzu & Linsen Intersection
+320;1;320;28;10;2.0201E+13;25.051287;121.564262;  Songshan Dist.;  MRT Nanjing Sanmin Sta.(Exit.3)
+321;1;321;32;5;2.0201E+13;25.031334;121.505085;  Zhongzheng Dist.;  Juguang & Dapu Intersection
+322;1;322;30;5;2.0201E+13;25.058835;121.52504;  Zhongshan Dist.;  Yongsheng Park
+323;1;323;26;10;2.0201E+13;25.061568;121.524392;  Zhongshan Dist.;  Xinxing Park
+324;1;324;24;14;2.0201E+13;25.08221;121.5108;  Shilin Dist.;  Taipei Public Library Huludu Branch
+325;1;325;40;1;2.0201E+13;25.05827;121.58707;  Neihu Dist.;  Ln. 368
+326;1;326;30;0;2.0201E+13;25.04525;121.56709;  Xinyi Dist.;  Ln. 101
+327;1;327;24;9;2.0201E+13;25.03158;121.51464;  Zhongzheng Dist.;  Chongqing & Nanhai Intersection
+328;1;328;36;23;2.0201E+13;25.05316;121.53146;  Zhongshan Dist.;  Yijiang Park
+329;1;329;34;14;2.0201E+13;25.07983;121.55236;  Zhongshan Dist.;  Lequn 2nd & Mingshui Intersection
+330;1;330;28;13;2.0201E+13;25.07491;121.5115;  Datong Dist.;  Dihua Park
+331;1;331;34;24;2.0201E+13;25.06859;121.51974;  Zhongshan Dist.;  Minzu & Yumen Intersection
+332;1;332;34;3;2.0201E+13;25.05225;121.52193;  Zhongshan Dist.;  MRT Zhongshan Sta. (Exit 2)
+333;1;333;28;2;2.0201E+13;25.047428;121.561182;  Songshan Dist.;  Fusheng Park
+334;1;334;24;8;2.0201E+13;25.028973;121.549024;  Daan Dist.;  Ln. 103
+335;1;335;32;23;2.0201E+13;24.986301;121.567855;  Wenshan Dist.;  Jingwen High School
+336;1;336;22;3;2.0201E+13;25.06382;121.51815;  Datong Dist.;  Ln. 8
+337;1;337;30;5;2.0201E+13;25.05301;121.57592;  Neihu Dist.;  Rainbow Bridge
+338;1;338;32;4;2.0201E+13;25.04573;121.58794;  Nangang Dist.;  Chengde Junior High School
+339;1;339;34;18;2.0201E+13;25.07581;121.51816;  Datong Dist.;  Chongcing Junior High School
+340;1;340;22;4;2.0201E+13;25.05143;121.55716;  Songshan Dist.;  Nanjing Guangfu Intersection
+341;1;341;38;10;2.0201E+13;25.10094;121.52243;  Shilin Dist.;  MRT Zhishan Sta.(Exit.1)
+342;1;342;30;8;2.0201E+13;25.10779;121.51468;  Beitou Dist.;  Wenlin & Jianmin Intersection
+343;1;343;30;12;2.0201E+13;25.04904;121.58755;  Nangang Dist.;  Ln. 185
+344;1;344;42;1;2.0201E+13;25.04264;121.54401;  Daan Dist.;  MRT Zhongxiao Fuxing Sta.(Exit.5)
+345;1;345;52;23;2.0201E+13;25.03806;121.51943;  Zhongzheng Dist.;  Zhongzheng Sports Center
+346;1;346;36;15;2.0201E+13;25.09157;121.51669;  Shilin Dist.;  Yangming High School
+347;1;347;26;17;2.0201E+13;25.04134;121.51135;  Zhongzheng Dist.;  Boai & Baoqing Intersection
+348;1;348;24;4;2.0201E+13;25.058522;121.55942;  Songshan Dist.;  Minsheng Parking Lot
+349;1;349;28;5;2.0201E+13;25.07183;121.51364;  Datong Dist.;  Chongqing & Jiuquan Intersection
+350;1;350;32;0;2.0201E+13;25.02904;121.54336;  Daan Dist.;  Ln. 128
+351;1;351;38;19;2.0201E+13;25.04469;121.51954;  Zhongzheng Dist.;  Zhongshan & Qingdao Intersection
+352;1;352;46;6;2.0201E+13;25.06318;121.50944;  Datong Dist.;  Minquan & Dihua Intersection
+353;1;353;30;2;2.0201E+13;25.02088;121.52049;  Zhongzheng Dist.;  Kishu An Forest of Literature
+354;1;354;28;14;2.0201E+13;25.040033;121.538084;  Daan Dist.;  Jianguo & Jinan Intersection
+355;1;355;34;9;2.0201E+13;25.04478;121.61759;  Nangang Dist.;  Fushan Park
+356;1;356;32;10;2.0201E+13;25.0674;121.59749;  Neihu Dist.;  Taipei Tennis Center
+357;1;357;26;2;2.0201E+13;25.03423;121.57636;  Xinyi Dist.;  @Songyou Park
+358;1;358;30;13;2.0201E+13;25.06058;121.5911;  Neihu Dist.;  Xinming & Chenggong Intersection
+359;1;359;34;4;2.0201E+13;25.05601;121.56358;  Songshan Dist.;  Jianan Sincheng
+360;1;360;44;14;2.0201E+13;25.06252;121.53754;  Zhongshan Dist.;  Minquan & Jianguo Intersection
+361;1;361;32;12;2.0201E+13;25.1177;121.5222;  Beitou Dist.;  Cheng Hsin General Hospital
+362;1;362;30;21;2.0201E+13;25.02672;121.52533;  Daan Dist.;  Heping & Jinshan Intersection
+363;1;363;32;25;2.0201E+13;25.03617;121.5435;  Daan Dist.;  Ln. 340
+364;1;364;38;6;2.0201E+13;25.02109;121.55219;  Daan Dist.;  Jiaxing Park
+365;1;365;50;13;2.0201E+13;25.11912;121.51223;  Beitou Dist.;  National Yang-Ming University
+366;1;366;42;6;2.0201E+13;25.07988;121.58287;  Neihu Dist.;  Bihu Park
+367;1;367;30;11;2.0201E+13;25.13597;121.497019;  Beitou Dist.;  Fengnian Park
+368;1;368;44;19;2.0201E+13;25.10208;121.51979;  Shilin Dist.;  The Xiqu Center of Taiwan
+369;1;369;34;21;2.0201E+13;24.98862;121.54361;  Wenshan Dist.;  Shih Hsin University
+370;1;370;32;0;2.0201E+13;25.02656;121.50242;  Wanhua Dist.;  Xinhe Elementary School
+371;1;371;38;24;2.0201E+13;25.03532;121.50834;  Zhongzheng Dist.;  Nanmen Junior High School
+372;1;372;26;2;2.0201E+13;25.06825;121.51359;  Datong Dist.;  Chongqing & Minzu Intersection
+373;1;373;32;7;2.0201E+13;25.04525;121.546635;  Songshan Dist.;  Zhonglun Fucheng Temple
+374;1;374;34;14;2.0201E+13;25.073322;121.602225;  Neihu Dist.;  Lihu Elementary School
+375;1;375;48;31;2.0201E+13;25.087714;121.526766;  Shilin Dist.;  Ming Chuan University
+376;1;376;36;13;2.0201E+13;25.057778;121.536915;  Zhongshan Dist.;  Minsheng & Jianguo Intersection
+377;1;377;30;3;2.0201E+13;25.053675;121.599693;  Nangang Dist.;  Ln. 178
+378;1;378;42;0;2.0201E+13;25.073193;121.578691;  Neihu Dist.;  Ln. 321
+379;1;379;38;4;2.0201E+13;25.042619;121.580762;  Xinyi Dist.;  Chunguang Park
+380;1;380;30;15;2.0201E+13;25.064713;121.567899;  Songshan Dist.;  Tayou Evacuation Gate
+381;1;381;30;14;2.0201E+13;25.06853;121.578125;  Neihu Dist.;  Ln. 15
+382;1;382;42;7;2.0201E+13;25.03516;121.50639;  Zhongzheng Dist.;  City Hospital (Heping Branch)
+383;1;383;26;4;2.0201E+13;24.97848;121.55545;  Wenshan Dist.;  Yishou Bridge
+384;1;384;30;16;2.0201E+13;25.05491;121.5448;  Songshan Dist.;  Songji Park
+385;1;385;40;16;2.0201E+13;24.9856;121.54531;  Wenshan Dist.;  Ln.26 
+386;1;386;30;7;2.0201E+13;25.06029;121.52981;  Zhongshan Dist.;  Jinzhou & Jilin Intersection
+387;1;387;32;2;2.0201E+13;25.0261;121.56316;  Xinyi Dist.;  Ln. 260
+388;1;388;24;6;2.0201E+13;24.995563;121.547092;  Wenshan Dist.;  Ln.128
+389;1;389;30;1;2.0201E+13;25.038324;121.586245;  Xinyi Dist.;  Fude Elementary School
+390;1;390;34;13;2.0201E+13;25.139937;121.489594;  Beitou Dist.;  Daoxiang & Chongsan Intersection
+391;1;391;30;19;2.0201E+13;24.9966;121.540295;  Wenshan Dist.;  Jingren Park
+392;1;392;30;11;2.0201E+13;25.051489;121.565347;  Songshan Dist.;  Nanjing & Dongxing Intersection
+393;1;393;24;11;2.0201E+13;25.087217;121.623062;  Neihu Dist.;  Neigousi Eological Exhibition Hall
+394;1;394;32;0;2.0201E+13;25.038352;121.576248;  Xinyi Dist.;  Songde & Hulin Intersection
+395;1;395;28;5;2.0201E+13;25.036844;121.575413;  Xinyi Dist.;  Anciang Park
+396;1;396;28;1;2.0201E+13;25.061501;121.563318;  Songshan Dist.;  Ln.51
+397;1;397;36;6;2.0201E+13;25.079603;121.5237;  Shilin Dist.;  Chientan Overseas Youth Activity Center
+398;1;398;30;13;2.0201E+13;25.104546;121.531949;  Shilin Dist.;  Taipei City Hospital (Yangming Branch)
+399;1;399;34;24;2.0201E+13;25.026404;121.52946;  Daan Dist.;  Heping & Longquan Intersection
+400;1;400;34;2;2.0201E+13;25.02444;121.549076;  Daan Dist.;  Heping & Dunhua Intersection
+401;1;401;34;12;2.0201E+13;25.051944;121.527661;  Zhongshan Dist.;  Nanjing & Xinsheng Intersection
+402;1;402;28;12;2.0201E+13;25.065159;121.595611;  Neihu Dist.;  Siawan Park
+403;1;403;28;5;2.0201E+13;25.083868;121.593929;  Neihu Dist.;  MRT Neihu Sta.1(Exit.1)
+404;1;404;30;2;2.0201E+13;25.068653;121.510569;  Datong Dist.;  Minzu & Yanping Intersection
