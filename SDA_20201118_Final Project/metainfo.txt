@@ -1,0 +1,20 @@
+Name of Quantlet: 'SDA_20201119_Final Project'
+
+Published in: 'SDA_2020_NCTU'
+
+Description: 'The First Progress of Final Project of SDA I Class'
+
+Submitted:  '19 November 2020'
+
+Input: 'SDA_data.csv'
+
+Output:  'Covid Ratio_Currencies.png, Covid19.png'
+
+Keywords:
+- LSTM
+- ADRL
+- Granger Causality
+- Covid-19
+- Currency
+
+Author: Samingun Handoyo, Andreas Rony Wijaya
