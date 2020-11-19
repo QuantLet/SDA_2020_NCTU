@@ -1,0 +1,14 @@
+Published in: 'SDA_2020_NCTU'
+
+Name of Quantlet: Web Crawling and Latent Dirichlet Alocation (LDA) into seven topics
+
+Description: Collect >=130 abstracts from http://www.wiwi.hu-berlin.de/de/forschung/irtg/results/discussion-papers
+
+Keywords:
+- Web scraper
+- Regular expression
+- Abstract analysis
+- LDA preparation
+- Textmining
+
+Author: FB, FS, JH, WKH, Dwilaksana
