@@ -1,15 +1,15 @@
-Name of Quantlet : vietnam_news_webscrap
+Name of Quantlet : vietnam_news_webscap
 
 Published in :  SDA_2020_NCTU
 
-Description :  
-- Running simple web-scraping on a very popular Vietnam news channel vietnam.net (only focus on Finance section of the page) 
-- Provide the wordcloud of the headlines
-
+Description : simple web-scraping on vietnam.net 
 Keywords : 
-- Web-scraping
-- Vietnam News
+- web-scaping
+- Vietnam news
 - Wordcloud
+- finance news
+- text mining
+
 
 
 Author : Huong Vu 0856156
