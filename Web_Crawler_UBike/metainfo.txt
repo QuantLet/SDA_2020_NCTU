@@ -1,14 +1,11 @@
 Name of Quantlet: 'Web_Crawler_UBike'
 
+Published in: 'SDA_2020_NCTU'
+
 Description: 'A Web Crawler for UBike website, and visualizes dataset with scatter plot'
 
-Submitted:  '3 Nov 2020'
+Submitted: '3 Nov 2020'
 
-Datafiles: 
-'https://data.ntpc.gov.tw/api/datasets/71CD1490-A2DF-4198-BEF1-318479775E8A/json'
+Keywords: 'crawler, crawling, ubike, scatter, web'
 
-Input:
-
-Output:  GeoInfo map
-
-Author: Susan Ku
+Author: 'Susan'
