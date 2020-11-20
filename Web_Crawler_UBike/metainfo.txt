@@ -1,0 +1,11 @@
+Name of Quantlet: 'Web_Crawler_UBike'
+
+Published in: 'SDA_2020_NCTU'
+
+Description: 'A Web Crawler for UBike website, and visualizes dataset with scatter plot'
+
+Submitted: '3 Nov 2020'
+
+Keywords: 'crawler, crawling, ubike, scatter, web'
+
+Author: 'Susan'
