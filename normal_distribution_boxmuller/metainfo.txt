@@ -1,4 +1,4 @@
-Name of Quantlet : xinbei_bike_opendata
+Name of Quantlet : normal_distribution_boxmuller
 
 Published in :  SDA_2020_NCTU
 
