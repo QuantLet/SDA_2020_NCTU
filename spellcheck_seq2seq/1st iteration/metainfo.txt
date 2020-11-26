@@ -1,0 +1,14 @@
+Name of Quantlet : spellcheck_seq2seq
+
+Published in :  SDA_2020_NCTU
+
+Description : 1st Iteration: Project Proposal (No code)
+
+Keywords : 
+- spellcheck
+- deep learning
+- seq2seq
+- recurrent network
+- neural network
+
+Author : Huong Vu 0856156 & Susan Ku 0856706
