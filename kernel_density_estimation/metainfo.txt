@@ -9,6 +9,6 @@ Keywords :
 - probability density function
 - non-parametric method
 - normal distribution
-- Distribution Analysis
+- distribution analysis
 
 Author : Huong Vu 0856156
