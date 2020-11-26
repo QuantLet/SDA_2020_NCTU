@@ -1,0 +1,14 @@
+Name of Quantlet : kernel_density_estimation
+
+Published in :  SDA_2020_NCTU
+
+Description :  Kernel Density Estimation Using Scikit-Learn
+
+Keywords : 
+- kernel density estimation
+- probability density function
+- non-parametric method
+- normal distribution
+- Distribution Analysis
+
+Author : Huong Vu 0856156
