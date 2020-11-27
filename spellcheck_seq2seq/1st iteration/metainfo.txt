@@ -11,4 +11,4 @@ Keywords :
 - recurrent network
 - neural network
 
-Author : Huong Vu 0856156 & Susan Ku 0856706
+Author : Huong Vu 0856156, Susan Ku 0856706
