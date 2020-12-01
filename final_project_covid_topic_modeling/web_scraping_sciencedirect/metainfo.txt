@@ -1,0 +1,14 @@
+Name of Quantlet: web_scraping_sciencedirect
+
+Published in:  SDA_2020_NCTU
+
+Description: scraping on sciencedirect with scrapy, the data will be used to create topic modeling about covid19 based on the abstract
+
+Keywords:
+- web crawling
+- abstract
+- covid19
+- sciencedirect
+- topic modeling
+
+Author: Muhaimin, Rasyid, Aziz
