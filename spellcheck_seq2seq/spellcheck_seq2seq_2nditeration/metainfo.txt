@@ -2,7 +2,7 @@ Name of Quantlet : spellcheck_seq2seq_2nditeration
 
 Published in :  SDA_2020_NCTU
 
-Description : 2nd Iteration: Data processing and encoder-decoder
+Description : 2nd Iteration - Data processing and encoder-decoder
 
 Keywords : 
 - spellcheck
