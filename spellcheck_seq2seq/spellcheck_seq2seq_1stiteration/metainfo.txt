@@ -1,8 +1,8 @@
-Name of Quantlet : spellcheck_seq2seq
+Name of Quantlet : spellcheck_seq2seq_1stiteration
 
 Published in :  SDA_2020_NCTU
 
-Description : 1st Iteration: Project Proposal (No code)
+Description : 1st Iteration - Project Proposal (No code)
 
 Keywords : 
 - spellcheck
