@@ -11,4 +11,4 @@ Keywords:
 - sciencedirect
 - topic modeling
 
-Author: Muhaimin, Rasyid, Aziz
+Author: Muhaimin, Rasyid, Aziz, 07/12/2020
