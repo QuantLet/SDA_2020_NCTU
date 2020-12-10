@@ -1,0 +1,14 @@
+Name of Quantlet: preprocessing_text_abstract
+
+Published in:  SDA_2020_NCTU
+
+Description: Preprocessing data which is text data. it contains case folding, tokenizing, lemmatizer, and stemming.
+
+Keywords:
+- case folding
+- abstract
+- lemmatizer
+- tokenizing
+- stopwords
+
+Author: Muhaimin, Rasyid, Aziz, Maya, 07-12-2020
