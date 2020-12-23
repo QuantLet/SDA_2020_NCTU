@@ -2,7 +2,7 @@ Name of Quantlet : spellcheck_seq2seq_3rditeration
 
 Published in :  SDA_2020_NCTU
 
-Description : Final Iteration: Final implementation 
+Description : Final Iteration- Final implementation 
 
 Keywords : 
 - spellcheck
