@@ -1,0 +1,20 @@
+Name of Quantlet: 'Granger_Causality'
+
+Published in: 'SDA_2020_NCTU'
+
+Description: 'Test for Granger causality among series'
+
+Submitted:  '18 November 2020'
+
+Input: 'SDA_data.csv'
+
+Output:  'CovidRatio_ExchangeRate.png, Covid-19.png'
+
+Keywords:
+- LSTM
+- Exchange Rate
+- Granger Causality
+- Covid-19
+- Currency
+
+Author: Samingun Handoyo, Andreas Rony Wijaya
