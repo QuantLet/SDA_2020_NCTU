@@ -22,7 +22,7 @@ full_text = pd.read_csv(cwd +'/yahoo_jp.csv', sep=';')['text'].values
 
 
 # Define Stopping Words
-open(cwd +'/stopwords-ja.txt', 'r+') as sw_file
+with open(cwd + '/stopwords-ja.txt', 'r+', encoding='utf-8') as sw_file:
     sw = sw_file.read().splitlines()  # Define stop words and punctuation, not perfect!
 sw.extend(['\n', '\n\n'])
 
