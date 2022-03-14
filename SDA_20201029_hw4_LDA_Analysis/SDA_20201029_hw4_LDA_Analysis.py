@@ -53,7 +53,7 @@ abstract_all = list()
 for paper in info_list:
     print(paper[0])
     try:
-        paper_abstract_page = requests.get(abs_link + paper[3], headers={'Connection': 'close'})
+        paper_abstract_page = requests.get(paper[3], headers={'Connection': 'close'})
 
         if paper_abstract_page.status_code == 200:
             # if paper[3][-3:] == 'txt':
@@ -80,7 +80,7 @@ for paper in info_list:
         print(paper[3])
         continue
 
-with open(cwd_dir + 'Abstract_all.txt', 'w') as abs_all_f:
+with open(cwd_dir + 'Abstract_all.txt', 'w', encoding="utf-8") as abs_all_f:
     abs_all_f.writelines(abstract_all)
 
 abstract_all
