@@ -9,7 +9,7 @@ Name of Quantlet: SMSdisthealth05_python
 
 Published in: Multivariate Statistics: Exercises and Solutions
 
-Description: Calculates distance matrices for Maine, New Hampshire and New York from the US
+Description: Calculates distance matrices for Maine, New Hampshire and New York from the US health 2005 data set. The distance measures are Euclidean, Manhattan and maximum distance.
 
 Keywords: cluster-analysis, distance, euclidean, euclidean-distance-matrix, manhattan metric
 
